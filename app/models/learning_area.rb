@@ -1,0 +1,2 @@
+class LearningArea < ApplicationRecord
+end
