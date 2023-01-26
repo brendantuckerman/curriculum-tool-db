@@ -383,3 +383,644 @@ Migrating to CreateGeneralCapabilities (20230123084126)
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
   [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveSubjectFromLearningArea (20230124061224)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230124061224"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveGeneralCapabilities (20230124061447)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE "general_capabilities"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230124061447"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveGeneralCapabilities (20230124061447)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveGeneralCapabilities (20230124061447)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveSubjectFromLearningAreas (20230126010923)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "learning_areas" DROP COLUMN "subject"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126010923"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSubjects (20230126011436)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" bigserial primary key, "name" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126011436"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGeneralCapabilites (20230126011926)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "general_capabilites" ("id" bigserial primary key, "name" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126011926"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 01:24:17.830436"], ["updated_at", "2023-01-26 01:24:17.830436"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.4ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.3ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 01:24:17.849298"], ["updated_at", "2023-01-26 01:24:17.849298"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.1ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.1ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.4ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 01:24:17.861083"], ["updated_at", "2023-01-26 01:24:17.861083"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 01:25:33.708545"], ["updated_at", "2023-01-26 01:25:33.708545"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.4ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.3ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.4ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 01:25:33.732790"], ["updated_at", "2023-01-26 01:25:33.732790"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.2ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.3ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 01:25:33.749347"], ["updated_at", "2023-01-26 01:25:33.749347"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.2ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 01:25:40.445612"], ["updated_at", "2023-01-26 01:25:40.445612"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.5ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.3ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.4ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 01:25:40.469706"], ["updated_at", "2023-01-26 01:25:40.469706"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.2ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.3ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 01:25:40.493636"], ["updated_at", "2023-01-26 01:25:40.493636"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.2ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 01:25:54.176332"], ["updated_at", "2023-01-26 01:25:54.176332"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.6ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.3ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 01:25:54.210450"], ["updated_at", "2023-01-26 01:25:54.210450"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.1ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 01:25:54.231065"], ["updated_at", "2023-01-26 01:25:54.231065"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameGeneralCapabilitesToGeneralCapabilities (20230126013324)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126013324"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameGeneralCapabilitesToGeneralCapabilities (20230126013324)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameGeneralCapabilitesToGeneralCapabilities (20230126013517)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "general_capabilites" RENAME TO "general_capabilities"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "general_capabilites_pkey" RENAME TO "general_capabilities_pkey"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "public"."general_capabilites_id_seq" RENAME TO "general_capabilities_id_seq"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126013517"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 01:37:26.655619"], ["updated_at", "2023-01-26 01:37:26.655619"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.2ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 01:37:26.671805"], ["updated_at", "2023-01-26 01:37:26.671805"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.1ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.3ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 01:37:26.684551"], ["updated_at", "2023-01-26 01:37:26.684551"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveGeneralCapabilitiesAgain (20230126021442)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "general_capabilities"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126021442"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGeneralCapabilities (20230126021530)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "general_capabilities" ("id" bigserial primary key, "GeneralCapability_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "name" text, "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition:0x0000557422a1bfa8>" text, CONSTRAINT "fk_rails_bfc0fb0ed4"
+FOREIGN KEY ("GeneralCapability_id")
+  REFERENCES "GeneralCapabilities" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGeneralCapabilities (20230126021530)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGeneralCapabilities (20230126021530)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "general_capabilities" ("id" bigserial primary key, "GeneralCapability_id" bigint, "name" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE INDEX "index_general_capabilities_on_GeneralCapability_id" ON "general_capabilities" ("GeneralCapability_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126021530"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:20:56.012405"], ["updated_at", "2023-01-26 02:20:56.012405"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.2ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:20:56.028492"], ["updated_at", "2023-01-26 02:20:56.028492"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.1ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.1ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:20:56.039123"], ["updated_at", "2023-01-26 02:20:56.039123"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveGeneralCapabilitiesAgainAgain (20230126023439)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "general_capabilities"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126023439"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCapabilities (20230126023525)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "capabilities" ("id" bigserial primary key, "name" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230126023525"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:36:33.713568"], ["updated_at", "2023-01-26 02:36:33.713568"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.4ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.3ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.4ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:36:33.738168"], ["updated_at", "2023-01-26 02:36:33.738168"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.2ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.3ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:36:33.753173"], ["updated_at", "2023-01-26 02:36:33.753173"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.2ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:38:19.087116"], ["updated_at", "2023-01-26 02:38:19.087116"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.3ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.5ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.3ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.5ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:38:19.129586"], ["updated_at", "2023-01-26 02:38:19.129586"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.3ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.5ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.4ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:38:19.156132"], ["updated_at", "2023-01-26 02:38:19.156132"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.3ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:38:36.127192"], ["updated_at", "2023-01-26 02:38:36.127192"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.3ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.5ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.3ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.5ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:38:36.168439"], ["updated_at", "2023-01-26 02:38:36.168439"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.3ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.5ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.3ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.4ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:38:36.194623"], ["updated_at", "2023-01-26 02:38:36.194623"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.3ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:40:36.677302"], ["updated_at", "2023-01-26 02:40:36.677302"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.3ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.2ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:40:36.697977"], ["updated_at", "2023-01-26 02:40:36.697977"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.1ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.1ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:40:36.709037"], ["updated_at", "2023-01-26 02:40:36.709037"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:43:51.974195"], ["updated_at", "2023-01-26 02:43:51.974195"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.2ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:43:51.997565"], ["updated_at", "2023-01-26 02:43:51.997565"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.2ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.3ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:43:52.011205"], ["updated_at", "2023-01-26 02:43:52.011205"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:46:52.539400"], ["updated_at", "2023-01-26 02:46:52.539400"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.4ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.2ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:46:52.562107"], ["updated_at", "2023-01-26 02:46:52.562107"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.1ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.3ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:46:52.581223"], ["updated_at", "2023-01-26 02:46:52.581223"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.4ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literacy"], ["created_at", "2023-01-26 02:46:52.596533"], ["updated_at", "2023-01-26 02:46:52.596533"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCapability Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "capabilities"[0m
+  [1m[36mCapability Pluck (0.5ms)[0m  [1m[34mSELECT "text" FROM "capabilities"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:48:31.467680"], ["updated_at", "2023-01-26 02:48:31.467680"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.5ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.3ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.4ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:48:31.497922"], ["updated_at", "2023-01-26 02:48:31.497922"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.2ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.3ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:48:31.516567"], ["updated_at", "2023-01-26 02:48:31.516567"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.2ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mCapability Load (0.5ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.3ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literacy"], ["created_at", "2023-01-26 02:48:31.534510"], ["updated_at", "2023-01-26 02:48:31.534510"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCapability Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "capabilities"[0m
+  [1m[36mCapability Pluck (0.2ms)[0m  [1m[34mSELECT "capabilities"."name" FROM "capabilities"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:50:02.730368"], ["updated_at", "2023-01-26 02:50:02.730368"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.2ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:50:02.747366"], ["updated_at", "2023-01-26 02:50:02.747366"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.1ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:50:02.760034"], ["updated_at", "2023-01-26 02:50:02.760034"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-01-26 02:50:37.586553"], ["updated_at", "2023-01-26 02:50:37.586553"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.3ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.2ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 22]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.3ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-01-26 02:50:37.610410"], ["updated_at", "2023-01-26 02:50:37.610410"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.2ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.3ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.3ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-01-26 02:50:37.623522"], ["updated_at", "2023-01-26 02:50:37.623522"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Geography"], ["created_at", "2023-01-26 02:50:37.636413"], ["updated_at", "2023-01-26 02:50:37.636413"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "subjects"[0m
+  [1m[36mSubject Pluck (0.2ms)[0m  [1m[34mSELECT "subjects"."name" FROM "subjects"[0m
+  [1m[36mCapability Load (0.4ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.3ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literacy"], ["created_at", "2023-01-26 02:50:37.658885"], ["updated_at", "2023-01-26 02:50:37.658885"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCapability Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "capabilities"[0m
+  [1m[36mCapability Pluck (0.2ms)[0m  [1m[34mSELECT "capabilities"."name" FROM "capabilities"[0m
