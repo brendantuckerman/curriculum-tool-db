@@ -10,14 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_26_023525) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_28_023703) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "achievement_standards", force: :cascade do |t|
+    t.text "description"
+    t.text "knowledge"
+    t.text "skills"
+    t.text "understanding"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "capabilities", force: :cascade do |t|
     t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "classes", force: :cascade do |t|
+    t.text "class_code"
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "content_descriptors", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "code"
+    t.text "elaborations"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "knowledge"
+    t.text "understanding"
+    t.text "skills"
+    t.text "notes"
   end
 
   create_table "learning_areas", force: :cascade do |t|
@@ -26,8 +56,48 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_023525) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "priorities", force: :cascade do |t|
+    t.text "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "strands", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.date "dob"
+    t.integer "student_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "subjects", force: :cascade do |t|
     t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "substrands", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.text "notes"
+    t.integer "weighting"
+    t.text "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -39,6 +109,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_26_023525) do
     t.datetime "updated_at", null: false
     t.text "password_digest"
     t.boolean "admin"
+  end
+
+  create_table "year_descriptions", force: :cascade do |t|
+    t.text "description"
+    t.text "knowledge"
+    t.text "understanding"
+    t.text "skills"
+    t.text "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "years", force: :cascade do |t|
