@@ -1,0 +1,2 @@
+class ContentDescriptor < ApplicationRecord
+end

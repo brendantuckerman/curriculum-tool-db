@@ -41,6 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_28_031754) do
     t.string "title"
     t.text "description"
     t.string "code"
+    ##TODO: elaborations2...
     t.text "elaborations"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
