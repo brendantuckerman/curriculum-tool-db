@@ -1,0 +1,2 @@
+class Substrand < ApplicationRecord
+end

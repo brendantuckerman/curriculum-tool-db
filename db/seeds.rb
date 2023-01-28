@@ -35,8 +35,82 @@ y0 = Year.create!(
     is_band:  false
 )
 
+y1 = Year.create!(
+    label: "Year 1",
+    year: 1,
+    is_band:  false
+)
+
+y2 = Year.create!(
+    label: "Year 2",
+    year: 2,
+    is_band:  false
+)
+y3 = Year.create!(
+    label: "Year 3",
+    year: 3,
+    is_band:  false
+)
+y4 = Year.create!(
+    label: "Year 4",
+    year: 4,
+    is_band:  false
+)
+y5 = Year.create!(
+    label: "Year 5",
+    year: 5,
+    is_band:  false
+)
+y6 = Year.create!(
+    label: "Year 6",
+    year: 6,
+    is_band:  false
+)
+y7 = Year.create!(
+    label: "Year 7",
+    year: 7,
+    is_band:  false
+)
+y8 = Year.create!(
+    label: "Year 8",
+    year: 8,
+    is_band:  false
+)
+y9 = Year.create!(
+    label: "Year 9",
+    year: 9,
+    is_band:  false
+)
+y10 = Year.create!(
+    label: "Year 10",
+    year: 10,
+    is_band:  false
+)
+y11 = Year.create!(
+    label: "Senior 1",
+    year: 11,
+    is_band:  false
+)
+y12 = Year.create!(
+    label: "Senior 2",
+    year: 12,
+    is_band:  false
+)
+y13 = Year.create!(
+    label: "Years 7 and 8",
+    band_start: 7,
+    band_end: 8,
+    is_band:  true
+)
+y14 = Year.create!(
+    label: "Years 9 and 10",
+    band_start: 9,
+    band_end: 10,
+    is_band: true
+)
+
 puts "I have created #{Year.count} year levels."
-puts "The names of the year levels I have created are: #{Year.pluck(:label).join(', ')}."
+puts "The names of the year levels I have created are: #{Year.pluck(:label).join(', ')}.\n"
 
 ##! Learning Areas Seeds ###
 
@@ -48,23 +122,71 @@ l_a1 = LearningArea.create!(
     name: "English"
     
 )
+l_a2 = LearningArea.create!(
+    name: "Mathematics"
+    
+)
+l_a3 = LearningArea.create!(
+    name: "Science"
+    
+)
+l_a4 = LearningArea.create!(
+    name: "Humanities and Social Sciences"
+    
+)
+l_a5 = LearningArea.create!(
+    name: "The Arts"
+    
+)
+l_a6 = LearningArea.create!(
+    name: "Health and Physical Education"
+    
+)
+l_a7 = LearningArea.create!(
+    name: "Languages"
+    
+)
+l_a8 = LearningArea.create!(
+    name: "Technologies"
+    
+)
 
 puts "I have created #{LearningArea.count} Learning Areas."
-puts "The names of the Learning Areas I have created are: #{LearningArea.pluck(:name).join(', ')}."
+puts "The names of the Learning Areas I have created are: #{LearningArea.pluck(:name).join(', ')}.\n"
 
 ##! Subjects Seeds
 
-puts "\n#### Creating Learning Areas ####"
+puts "\n#### Creating Subjects ####"
 
 Subject.destroy_all
 
-l_a1 = Subject.create!(
+s1 = Subject.create!(
+    name: "History"
+    
+)
+s2 = Subject.create!(
     name: "Geography"
+    
+)
+s3 = Subject.create!(
+    name: "Economics and Business"
+    
+)
+s4 = Subject.create!(
+    name: "Civics and Citizenship"
+    
+)
+s5 = Subject.create!(
+    name: "Design & Technologies"
+    
+)
+s6 = Subject.create!(
+    name: "Digital Technologies"
     
 )
 
 puts "I have created #{Subject.count} Subjects."
-puts "The names of the Subjects I have created are: #{Subject.pluck(:name).join(', ')}."
+puts "The names of the Subjects I have created are: #{Subject.pluck(:name).join(', ')}.\n"
 
 
 # ##! GeneralCapabilities (Capabilities) Seeds
@@ -76,6 +198,136 @@ puts "\n#### Creating General Capabilities####"
 gc1 = Capability.create!(
     name: "Literacy"
 )
+gc2 = Capability.create!(
+    name: "Numeracy"
+)
+gc3 = Capability.create!(
+    name: "ICT Capability"
+)
+gc4 = Capability.create!(
+    name: "Critical and Creative Thinking"
+)
+gc5 = Capability.create!(
+    name: "Personal and Social Capability"
+)
+gc6 = Capability.create!(
+    name: "Intercultural Understanding"
+)
+gc7 = Capability.create!(
+    name: "Ethical Understanding"
+)
 
 puts "I have created #{Capability.count} General Capabilities."
 puts "The General Capabilities  I have created are: #{Capability.pluck(:name).join(', ')}."
+
+
+##! Year Descriptions Seeds
+
+
+
+YearDescription.destroy_all
+
+puts "\n#### Creating Year Descriptions####"
+
+d1 = YearDescription.create!(
+    description: "The English curriculum is built around the three interrelated strands of language, literature and literacy. Teaching and learning programs should balance and integrate all three strands. Together, the strands focus on developing students’ knowledge, understanding and skills in listening, reading, viewing, speaking, writing and creating. Learning in English builds on concepts, skills and processes developed in earlier years, and teachers will revisit and strengthen these as needed.
+
+    In Years 7 and 8, students communicate with peers, teachers, individuals, groups and community members in a range of face-to-face and online/virtual environments. They experience learning in familiar and unfamiliar contexts that relate to the school curriculum, local community, regional and global contexts.
+    
+    Students engage with a variety of texts for enjoyment. They listen to, read, view, interpret, evaluate and perform a range of spoken, written and multimodal texts in which the primary purpose is aesthetic, as well as texts designed to inform and persuade. These include various types of media texts including newspapers, magazines and digital texts, early adolescent novels, non-fiction, poetry and dramatic performances. Students develop their understanding of how texts, including media texts, are influenced by context, purpose and audience.
+    
+    The range of literary texts for Foundation to Year 10 comprises Australian literature, including the oral narrative traditions of Aboriginal and Torres Strait Islander Peoples, as well as the contemporary literature of these two cultural groups, and classic and contemporary world literature, including texts from and about Asia.
+    
+    Literary texts that support and extend students in Years 7 and 8 as independent readers are drawn from a range of realistic, fantasy, speculative fiction and historical genres and involve some challenging and unpredictable plot sequences and a range of non-stereotypical characters. These texts explore themes of interpersonal relationships and ethical dilemmas within real-world and fictional settings and represent a variety of perspectives. Informative texts present technical and content information from various sources about specialised topics. Text structures are more complex including chapters, headings and subheadings, tables of contents, indexes and glossaries. Language features include successive complex sentences with embedded clauses, unfamiliar technical vocabulary, figurative and rhetorical language, and information supported by various types of graphics.
+    
+    Students create a range of imaginative, informative and persuasive types of texts, for example narratives, procedures, performances, reports and discussions, and are beginning to create literary analyses and transformations of texts."
+)
+
+puts "I have created #{YearDescription.count} Year  Descriptions.\n"
+
+
+##! Tasks Seeds
+
+
+Task.destroy_all
+
+puts "\n### Creating Task Seeds ###"
+
+t1 = Task.create!(
+    name: "Essay Task 1",
+    description: "Text response essay on 'Romeo and Juliet'",
+    weighting: 33
+)
+
+
+puts "I have created #{Task.count} tasks."
+puts "The task(s)  I have created are: #{Task.pluck(:name).join(', ')}."
+
+##! Strands Seeds
+
+Strand.destroy_all
+
+
+puts "\n### Creating Strands Seeds ###"
+
+st1 = Strand.create!(
+    name: "Language"
+)
+st2 = Strand.create!(
+    name: "Literature"
+)
+st3 = Strand.create!(
+    name: "Literacy"
+)
+
+puts "I have created #{Strand.count} strands."
+puts "The strand(s)  I have created are: #{Strand.pluck(:name).join(', ')}."
+
+
+##! Substrand Seeds
+
+Substrand.destroy_all
+
+
+puts "\n### Creating Substrands Seeds ###"
+
+ss1 = Substrand.create!(
+    name: "Language variation and change"
+    #Language
+)
+ss2 = Substrand.create!(
+    name: "Literature and Context"
+    #Literature
+)
+ss3 = Substrand.create!(
+    name: "Texts in Context"
+    #Literacy
+)
+
+puts "I have created #{Substrand.count} substrands."
+puts "The substrands(s)  I have created are: #{Substrand.pluck(:name).join(', ')}."
+
+##! Thread Seeds 
+
+Subthread.destroy_all
+
+
+puts "\n### Creating (sub)Thread Seeds ###"
+
+th1 = Subthread.create!(
+    name: "Language variation and change"
+    #Language variation and change (has same name)
+)
+th2 = Subthread.create!(
+    name: "How texts reflect the context of culture and situation in which they are created"
+    #Literature and Context
+)
+th3 = Subthread.create!(
+    name: "Texts and the contexts in which they are used"
+    #Texts in context
+)
+
+puts "I have created #{Subthread.count} (sub)threads."
+puts "The subthreads(s)  I have created are: #{Subthread.pluck(:name).join(', ')}."
+
+##TODO: Alphabetise these so they match with schema

@@ -1,0 +1,2 @@
+class Subthread < ApplicationRecord
+end
