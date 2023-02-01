@@ -4426,3 +4426,369 @@ Migrating to RenameThreadToSubthread (20230128031754)
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mContentDescriptor Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "content_descriptors"[0m
   [1m[36mContentDescriptor Pluck (0.1ms)[0m  [1m[34mSELECT "content_descriptors"."code" FROM "content_descriptors"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameClassesToClassGroups (20230201062919)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "classes" RENAME TO "class_groups"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER INDEX "classes_pkey" RENAME TO "class_groups_pkey"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "public"."classes_id_seq" RENAME TO "class_groups_id_seq"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230201062919"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2870508999580812240)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 37]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "created_at", "updated_at", "password_digest", "admin") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "admin@ctool.com"], ["name", "admin"], ["created_at", "2023-02-01 06:38:29.949032"], ["updated_at", "2023-02-01 06:38:29.949032"], ["password_digest", "[FILTERED]"], ["admin", true]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  [1m[36mYear Load (0.4ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.3ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 189]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 190]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 191]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 192]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 193]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 194]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 195]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 196]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 197]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 198]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 199]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 200]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 201]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 202]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Destroy (0.1ms)[0m  [1m[31mDELETE FROM "years" WHERE "years"."id" = $1[0m  [["id", 203]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.7ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 0], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:29.997177"], ["updated_at", "2023-02-01 06:38:29.997177"], ["label", "Foundation"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 1], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.000377"], ["updated_at", "2023-02-01 06:38:30.000377"], ["label", "Year 1"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 2], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.002981"], ["updated_at", "2023-02-01 06:38:30.002981"], ["label", "Year 2"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 3], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.005578"], ["updated_at", "2023-02-01 06:38:30.005578"], ["label", "Year 3"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 4], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.008142"], ["updated_at", "2023-02-01 06:38:30.008142"], ["label", "Year 4"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 5], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.010677"], ["updated_at", "2023-02-01 06:38:30.010677"], ["label", "Year 5"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 6], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.013184"], ["updated_at", "2023-02-01 06:38:30.013184"], ["label", "Year 6"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 7], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.015828"], ["updated_at", "2023-02-01 06:38:30.015828"], ["label", "Year 7"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 8], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.018362"], ["updated_at", "2023-02-01 06:38:30.018362"], ["label", "Year 8"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 9], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.020926"], ["updated_at", "2023-02-01 06:38:30.020926"], ["label", "Year 9"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 10], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.023444"], ["updated_at", "2023-02-01 06:38:30.023444"], ["label", "Year 10"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 11], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.025995"], ["updated_at", "2023-02-01 06:38:30.025995"], ["label", "Senior 1"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 12], ["is_band", false], ["band_start", nil], ["band_end", nil], ["created_at", "2023-02-01 06:38:30.029073"], ["updated_at", "2023-02-01 06:38:30.029073"], ["label", "Senior 2"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", nil], ["is_band", true], ["band_start", 7], ["band_end", 8], ["created_at", "2023-02-01 06:38:30.031630"], ["updated_at", "2023-02-01 06:38:30.031630"], ["label", "Years 7 and 8"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYear Create (0.1ms)[0m  [1m[32mINSERT INTO "years" ("year", "is_band", "band_start", "band_end", "created_at", "updated_at", "label") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", nil], ["is_band", true], ["band_start", 9], ["band_end", 10], ["created_at", "2023-02-01 06:38:30.034214"], ["updated_at", "2023-02-01 06:38:30.034214"], ["label", "Years 9 and 10"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYear Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "years"[0m
+  [1m[36mYear Pluck (0.2ms)[0m  [1m[34mSELECT "years"."label" FROM "years"[0m
+  [1m[36mLearningArea Load (0.8ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.5ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 111]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 112]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 113]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 114]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 115]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 116]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 117]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Destroy (0.2ms)[0m  [1m[31mDELETE FROM "learning_areas" WHERE "learning_areas"."id" = $1[0m  [["id", 118]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (1.0ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "English"], ["created_at", "2023-02-01 06:38:30.063905"], ["updated_at", "2023-02-01 06:38:30.063905"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mathematics"], ["created_at", "2023-02-01 06:38:30.071583"], ["updated_at", "2023-02-01 06:38:30.071583"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Science"], ["created_at", "2023-02-01 06:38:30.074378"], ["updated_at", "2023-02-01 06:38:30.074378"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Humanities and Social Sciences"], ["created_at", "2023-02-01 06:38:30.077099"], ["updated_at", "2023-02-01 06:38:30.077099"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "The Arts"], ["created_at", "2023-02-01 06:38:30.079780"], ["updated_at", "2023-02-01 06:38:30.079780"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Health and Physical Education"], ["created_at", "2023-02-01 06:38:30.082480"], ["updated_at", "2023-02-01 06:38:30.082480"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Languages"], ["created_at", "2023-02-01 06:38:30.085229"], ["updated_at", "2023-02-01 06:38:30.085229"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLearningArea Create (0.2ms)[0m  [1m[32mINSERT INTO "learning_areas" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Technologies"], ["created_at", "2023-02-01 06:38:30.087960"], ["updated_at", "2023-02-01 06:38:30.087960"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLearningArea Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "learning_areas"[0m
+  [1m[36mLearningArea Pluck (0.1ms)[0m  [1m[34mSELECT "learning_areas"."name" FROM "learning_areas"[0m
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = $1[0m  [["id", 68]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = $1[0m  [["id", 69]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = $1[0m  [["id", 70]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = $1[0m  [["id", 71]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = $1[0m  [["id", 72]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subjects" WHERE "subjects"."id" = $1[0m  [["id", 73]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (1.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "History"], ["created_at", "2023-02-01 06:38:30.112873"], ["updated_at", "2023-02-01 06:38:30.112873"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Geography"], ["created_at", "2023-02-01 06:38:30.116434"], ["updated_at", "2023-02-01 06:38:30.116434"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Economics and Business"], ["created_at", "2023-02-01 06:38:30.119227"], ["updated_at", "2023-02-01 06:38:30.119227"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Civics and Citizenship"], ["created_at", "2023-02-01 06:38:30.122262"], ["updated_at", "2023-02-01 06:38:30.122262"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Design & Technologies"], ["created_at", "2023-02-01 06:38:30.125077"], ["updated_at", "2023-02-01 06:38:30.125077"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubject Create (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Digital Technologies"], ["created_at", "2023-02-01 06:38:30.127944"], ["updated_at", "2023-02-01 06:38:30.127944"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubject Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "subjects"[0m
+  [1m[36mSubject Pluck (0.1ms)[0m  [1m[34mSELECT "subjects"."name" FROM "subjects"[0m
+  [1m[36mCapability Load (0.7ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 81]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 82]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 83]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 84]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 85]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 86]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Destroy (0.2ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 87]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.9ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literacy"], ["created_at", "2023-02-01 06:38:30.169183"], ["updated_at", "2023-02-01 06:38:30.169183"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.2ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Numeracy"], ["created_at", "2023-02-01 06:38:30.173487"], ["updated_at", "2023-02-01 06:38:30.173487"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.2ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ICT Capability"], ["created_at", "2023-02-01 06:38:30.176894"], ["updated_at", "2023-02-01 06:38:30.176894"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.2ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Critical and Creative Thinking"], ["created_at", "2023-02-01 06:38:30.180263"], ["updated_at", "2023-02-01 06:38:30.180263"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.2ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Personal and Social Capability"], ["created_at", "2023-02-01 06:38:30.184627"], ["updated_at", "2023-02-01 06:38:30.184627"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.2ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Intercultural Understanding"], ["created_at", "2023-02-01 06:38:30.189120"], ["updated_at", "2023-02-01 06:38:30.189120"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCapability Create (0.6ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ethical Understanding"], ["created_at", "2023-02-01 06:38:30.193920"], ["updated_at", "2023-02-01 06:38:30.193920"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCapability Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "capabilities"[0m
+  [1m[36mCapability Pluck (0.1ms)[0m  [1m[34mSELECT "capabilities"."name" FROM "capabilities"[0m
+  [1m[36mYearDescription Load (0.7ms)[0m  [1m[34mSELECT "year_descriptions".* FROM "year_descriptions"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYearDescription Destroy (0.4ms)[0m  [1m[31mDELETE FROM "year_descriptions" WHERE "year_descriptions"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mYearDescription Create (0.9ms)[0m  [1m[32mINSERT INTO "year_descriptions" ("description", "knowledge", "understanding", "skills", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "The English curriculum is built around the three interrelated strands of language, literature and literacy. Teaching and learning programs should balance and integrate all three strands. Together, the strands focus on developing students’ knowledge, understanding and skills in listening, reading, viewing, speaking, writing and creating. Learning in English builds on concepts, skills and processes developed in earlier years, and teachers will revisit and strengthen these as needed.\n\n        In Years 7 and 8, students communicate with peers, teachers, individuals, groups and community members in a range of face-to-face and online/virtual environments. They experience learning in familiar and unfamiliar contexts that relate to the school curriculum, local community, regional and global contexts.\n        \n        Students engage with a variety of texts for enjoyment. They listen to, read, view, interpret, evaluate and perform a range of spoken, written and multimodal texts in which the primary purpose is aesthetic, as well as texts designed to inform and persuade. These include various types of media texts including newspapers, magazines and digital texts, early adolescent novels, non-fiction, poetry and dramatic performances. Students develop their understanding of how texts, including media texts, are influenced by context, purpose and audience.\n        \n        The range of literary texts for Foundation to Year 10 comprises Australian literature, including the oral narrative traditions of Aboriginal and Torres Strait Islander Peoples, as well as the contemporary literature of these two cultural groups, and classic and contemporary world literature, including texts from and about Asia.\n        \n        Literary texts that support and extend students in Years 7 and 8 as independent readers are drawn from a range of realistic, fantasy, speculative fiction and historical genres and involve some challenging and unpredictable plot sequences and a range of non-stereotypical characters. These texts explore themes of interpersonal relationships and ethical dilemmas within real-world and fictional settings and represent a variety of perspectives. Informative texts present technical and content information from various sources about specialised topics. Text structures are more complex including chapters, headings and subheadings, tables of contents, indexes and glossaries. Language features include successive complex sentences with embedded clauses, unfamiliar technical vocabulary, figurative and rhetorical language, and information supported by various types of graphics.\n        \n        Students create a range of imaginative, informative and persuasive types of texts, for example narratives, procedures, performances, reports and discussions, and are beginning to create literary analyses and transformations of texts."], ["knowledge", nil], ["understanding", nil], ["skills", nil], ["notes", nil], ["created_at", "2023-02-01 06:38:30.236131"], ["updated_at", "2023-02-01 06:38:30.236131"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mYearDescription Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "year_descriptions"[0m
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTask Create (0.7ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "notes", "weighting", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Essay Task 1"], ["description", "Text response essay on 'Romeo and Juliet'"], ["notes", nil], ["weighting", 33], ["type", nil], ["created_at", "2023-02-01 06:38:30.269907"], ["updated_at", "2023-02-01 06:38:30.269907"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTask Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "tasks"[0m
+  [1m[36mTask Pluck (0.1ms)[0m  [1m[34mSELECT "tasks"."name" FROM "tasks"[0m
+  [1m[36mStrand Load (0.6ms)[0m  [1m[34mSELECT "strands".* FROM "strands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStrand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "strands" WHERE "strands"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStrand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "strands" WHERE "strands"."id" = $1[0m  [["id", 20]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStrand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "strands" WHERE "strands"."id" = $1[0m  [["id", 21]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStrand Create (0.5ms)[0m  [1m[32mINSERT INTO "strands" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Language"], ["description", nil], ["created_at", "2023-02-01 06:38:30.288393"], ["updated_at", "2023-02-01 06:38:30.288393"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStrand Create (0.2ms)[0m  [1m[32mINSERT INTO "strands" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Literature"], ["description", nil], ["created_at", "2023-02-01 06:38:30.291225"], ["updated_at", "2023-02-01 06:38:30.291225"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStrand Create (0.2ms)[0m  [1m[32mINSERT INTO "strands" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Literacy"], ["description", nil], ["created_at", "2023-02-01 06:38:30.293824"], ["updated_at", "2023-02-01 06:38:30.293824"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStrand Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "strands"[0m
+  [1m[36mStrand Pluck (0.2ms)[0m  [1m[34mSELECT "strands"."name" FROM "strands"[0m
+  [1m[36mSubstrand Load (0.7ms)[0m  [1m[34mSELECT "substrands".* FROM "substrands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubstrand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "substrands" WHERE "substrands"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubstrand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "substrands" WHERE "substrands"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubstrand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "substrands" WHERE "substrands"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubstrand Create (0.5ms)[0m  [1m[32mINSERT INTO "substrands" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Language variation and change"], ["description", nil], ["created_at", "2023-02-01 06:38:30.312259"], ["updated_at", "2023-02-01 06:38:30.312259"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubstrand Create (0.2ms)[0m  [1m[32mINSERT INTO "substrands" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Literature and Context"], ["description", nil], ["created_at", "2023-02-01 06:38:30.315207"], ["updated_at", "2023-02-01 06:38:30.315207"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubstrand Create (0.2ms)[0m  [1m[32mINSERT INTO "substrands" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Texts in Context"], ["description", nil], ["created_at", "2023-02-01 06:38:30.317987"], ["updated_at", "2023-02-01 06:38:30.317987"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubstrand Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "substrands"[0m
+  [1m[36mSubstrand Pluck (0.2ms)[0m  [1m[34mSELECT "substrands"."name" FROM "substrands"[0m
+  [1m[36mSubthread Load (0.7ms)[0m  [1m[34mSELECT "subthreads".* FROM "subthreads"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubthread Destroy (0.3ms)[0m  [1m[31mDELETE FROM "subthreads" WHERE "subthreads"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubthread Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subthreads" WHERE "subthreads"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubthread Destroy (0.2ms)[0m  [1m[31mDELETE FROM "subthreads" WHERE "subthreads"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubthread Create (0.7ms)[0m  [1m[32mINSERT INTO "subthreads" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Language variation and change"], ["created_at", "2023-02-01 06:38:30.337264"], ["updated_at", "2023-02-01 06:38:30.337264"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubthread Create (0.2ms)[0m  [1m[32mINSERT INTO "subthreads" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "How texts reflect the context of culture and situation in which they are created"], ["created_at", "2023-02-01 06:38:30.340346"], ["updated_at", "2023-02-01 06:38:30.340346"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubthread Create (0.2ms)[0m  [1m[32mINSERT INTO "subthreads" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Texts and the contexts in which they are used"], ["created_at", "2023-02-01 06:38:30.342960"], ["updated_at", "2023-02-01 06:38:30.342960"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mSubthread Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "subthreads"[0m
+  [1m[36mSubthread Pluck (0.1ms)[0m  [1m[34mSELECT "subthreads"."name" FROM "subthreads"[0m
+  [1m[36mPriority Load (0.7ms)[0m  [1m[34mSELECT "priorities".* FROM "priorities"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPriority Destroy (0.2ms)[0m  [1m[31mDELETE FROM "priorities" WHERE "priorities"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPriority Destroy (0.2ms)[0m  [1m[31mDELETE FROM "priorities" WHERE "priorities"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPriority Destroy (0.2ms)[0m  [1m[31mDELETE FROM "priorities" WHERE "priorities"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPriority Create (0.5ms)[0m  [1m[32mINSERT INTO "priorities" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Sustainability"], ["description", nil], ["created_at", "2023-02-01 06:38:30.367583"], ["updated_at", "2023-02-01 06:38:30.367583"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPriority Create (0.2ms)[0m  [1m[32mINSERT INTO "priorities" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Asia and Australia's engagement with Asia"], ["description", nil], ["created_at", "2023-02-01 06:38:30.370456"], ["updated_at", "2023-02-01 06:38:30.370456"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPriority Create (0.2ms)[0m  [1m[32mINSERT INTO "priorities" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Aboriginal and Torres Strait Islander Histories and Cultures"], ["description", nil], ["created_at", "2023-02-01 06:38:30.373023"], ["updated_at", "2023-02-01 06:38:30.373023"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPriority Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "priorities"[0m
+  [1m[36mPriority Pluck (0.1ms)[0m  [1m[34mSELECT "priorities"."title" FROM "priorities"[0m
+  [1m[36mContentDescriptor Load (0.9ms)[0m  [1m[34mSELECT "content_descriptors".* FROM "content_descriptors"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContentDescriptor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "content_descriptors" WHERE "content_descriptors"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContentDescriptor Create (0.7ms)[0m  [1m[32mINSERT INTO "content_descriptors" ("title", "description", "code", "elaborations", "created_at", "updated_at", "knowledge", "understanding", "skills", "notes") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", nil], ["description", "Understand that Standard Australian English is a living language within which the creation and loss of words and the evolution of usage is ongoing."], ["code", "ACELA1550"], ["elaborations", "Identifying some of the changes in the grammar of English over time, for example from ‘thee’ and ‘thou’ to ‘you’"], ["created_at", "2023-02-01 06:38:30.396056"], ["updated_at", "2023-02-01 06:38:30.396056"], ["knowledge", nil], ["understanding", nil], ["skills", nil], ["notes", nil]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mContentDescriptor Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "content_descriptors"[0m
+  [1m[36mContentDescriptor Pluck (0.1ms)[0m  [1m[34mSELECT "content_descriptors"."code" FROM "content_descriptors"[0m
+  [1m[36mClassGroup Load (0.7ms)[0m  [1m[34mSELECT "class_groups".* FROM "class_groups"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClassGroup Create (0.7ms)[0m  [1m[32mINSERT INTO "class_groups" ("class_code", "name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["class_code", "10ENG012"], ["name", "10 English 1"], ["description", "Year 10 Core English"], ["created_at", "2023-02-01 06:38:30.415330"], ["updated_at", "2023-02-01 06:38:30.415330"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mClassGroup Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "class_groups"[0m
+  [1m[36mClassGroup Pluck (0.1ms)[0m  [1m[34mSELECT "class_groups"."name" FROM "class_groups"[0m

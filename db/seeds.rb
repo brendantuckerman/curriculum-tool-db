@@ -328,7 +328,7 @@ Task.destroy_all
 ##! Cross-curriculum Priorities Seeds
     Priority.destroy_all
 
-    puts " #### Creating (Cross-curriculum) Priority Seeds ###"
+    puts "\n#### Creating (Cross-curriculum) Priority Seeds ###"
 
     p1 = Priority.create!(
         title: "Sustainability"
@@ -344,11 +344,11 @@ Task.destroy_all
     puts "The Priorities  I have created are: #{Priority.pluck(:title).join(', ')}.\n"
 
 
-##TODO: Content Descriptors
+##! Content Descriptors Seeds
 
     ContentDescriptor.destroy_all
 
-    puts "### Creating Content Descriptors ###"
+    puts "\n### Creating Content Descriptors ###"
 
     cd1 = ContentDescriptor.create!(
         description: "Understand that Standard Australian English is a living language within which the creation and loss of words and the evolution of usage is ongoing.",
@@ -362,6 +362,20 @@ Task.destroy_all
 
 
 
-##TODO: Classes (this will need a rename)
+##! ClassGroup Seeds
 
-##TODO: Achievement Standards
+    ClassGroup.destroy_all
+
+    puts "\n### Creating ClassGroup seeds"
+
+    cg1 = ClassGroup.create!(
+        name: "10 English 1",
+        class_code: "10ENG012",
+        description: "Year 10 Core English"
+    )
+
+    puts "I have finished creating #{ClassGroup.count} ClassGroups."
+    puts "The ClassGroups I have created are #{ClassGroup.pluck(:name).join(", ")}.\n"
+
+
+##TODO: Achievement Standards (??? The things at the start?)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_28_031754) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_01_062919) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_28_031754) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "classes", force: :cascade do |t|
+  create_table "class_groups", force: :cascade do |t|
     t.text "class_code"
     t.string "name"
     t.text "description"
@@ -41,7 +41,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_28_031754) do
     t.string "title"
     t.text "description"
     t.string "code"
-    ##TODO: elaborations2...
     t.text "elaborations"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -93,7 +92,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_28_031754) do
     t.datetime "updated_at", null: false
   end
 
-  #threads are called subthreads as the word is reserved in Ruby
   create_table "subthreads", force: :cascade do |t|
     t.text "name"
     t.datetime "created_at", null: false
