@@ -1,0 +1,2 @@
+class AchievementStandard < ApplicationRecord
+end

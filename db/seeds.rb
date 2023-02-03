@@ -378,4 +378,25 @@ Task.destroy_all
     puts "The ClassGroups I have created are #{ClassGroup.pluck(:name).join(", ")}.\n"
 
 
-##TODO: Achievement Standards (??? The things at the start?)
+##! Achievement Standards 
+
+    AchievementStandard.destroy_all
+
+    puts "\n ### Creating Seeds for Achievement Standards ### "
+
+    as1 = AchievementStandard.create!(
+        description: "
+        Receptive modes (listening, reading and viewing)
+        
+        By the end of Year 9, students analyse the ways that text structures can be manipulated for effect. They analyse and explain how images, vocabulary choices and language features distinguish the work of individual authors.
+        
+        They evaluate and integrate ideas and information from texts to form their own interpretations. They select evidence from texts to analyse and explain how language choices and conventions are used to influence an audience. They listen for ways texts position an audience.
+        Productive modes (speaking, writing and creating)
+        
+        Students understand how to use a variety of language features to create different levels of meaning. They understand how interpretations can vary by comparing their responses to texts to the responses of others. In creating texts, students demonstrate how manipulating language features and images can create innovative texts.
+        
+        Students create texts that respond to issues, interpreting and integrating ideas from other texts. They make presentations and contribute actively to class and group discussions, comparing and evaluating responses to ideas and issues. They edit for effect, selecting vocabulary and grammar that contribute to the precision and persuasiveness of texts and using accurate spelling and punctuation.
+        "
+    )
+    puts "I have finished creating #{AchievementStandard.count} ClassGroups."
+    puts "The ClassGroups I have created are #{AchievementStandard.pluck(:description).join(", ")}.\n"
