@@ -400,3 +400,29 @@ Task.destroy_all
     )
     puts "I have finished creating #{AchievementStandard.count} ClassGroups."
     puts "The ClassGroups I have created are #{AchievementStandard.pluck(:description).join(", ")}.\n"
+
+
+##! Mode Seeds ##
+
+    Mode.destroy_all
+
+    puts "\n### Creating Mode Seeds ###"
+
+    m1 = Mode.create!(
+        name: "Reading and Viewing",
+        notes: "Receptive Mode"
+    
+    )
+    
+    m2 = Mode.create!(
+        name: "Writing and Creating",
+        notes: "Productive Mode"
+    
+    )
+
+    puts "I have finished creating #{Mode.count} Modes."
+    puts "The Modes I have created are #{Mode.pluck(:name).join(", ")}.\n"
+
+
+
+    ##! Associations
