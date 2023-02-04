@@ -1,5 +1,5 @@
 class Subject < ApplicationRecord
 
-    belongs_to :learning_areas
+    has_many :learning_areas
 
 end

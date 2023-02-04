@@ -17,6 +17,13 @@
 
     )
 
+    u2 = User.create!(
+        name: "teacher1",
+        email: "teach@education.com",
+        password_digest: "chicken",
+        admin: false
+    )
+
     puts "I have created #{User.count} users."
     puts "The names of the users I have created are: #{User.pluck(:name).join(', ')}."
 
@@ -245,7 +252,7 @@
 ##! Tasks Seeds
 
 
-Task.destroy_all
+    Task.destroy_all
 
     puts "\n### Creating Task Seeds ###"
 
@@ -374,6 +381,12 @@ Task.destroy_all
         description: "Year 10 Core English"
     )
 
+    cg2 = ClassGroup.create!(
+        name: "9 English WIB",
+        class_code: "09ENG07",
+        description: "Year 9 Core English"
+    )
+
     puts "I have finished creating #{ClassGroup.count} ClassGroups."
     puts "The ClassGroups I have created are #{ClassGroup.pluck(:name).join(", ")}.\n"
 
@@ -425,6 +438,9 @@ Task.destroy_all
 
 
 
-    ##TODO:  Associations
+##! Creating Associations
 
-    ##puts "\n###### Creating Associations ##### "
+    puts "\n###### Creating Associations ##### "
+
+    u2.class_groups  << cg1 << cg2
+
