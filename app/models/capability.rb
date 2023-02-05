@@ -1,6 +1,6 @@
 class Capability < ApplicationRecord
 
 
-    has_many :capabilities
+    # has_many :capabilities
 
 end

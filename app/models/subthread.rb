@@ -1,5 +1,5 @@
 class Subthread < ApplicationRecord
 
-    belongs_to :substrands
+   has_many :substrands
 
 end

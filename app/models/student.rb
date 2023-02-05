@@ -1,7 +1,7 @@
 class Student < ApplicationRecord
 
-    has_many :class_groups
-    has_many :tasks
-    belongs_to :years
+    # has_many :class_groups
+    # has_many :tasks
+    # belongs_to :years
 
 end

@@ -378,13 +378,15 @@
     cg1 = ClassGroup.create!(
         name: "10 English 1",
         class_code: "10ENG012",
-        description: "Year 10 Core English"
+        description: "Year 10 Core English", 
+        user_id: u2.id
     )
 
     cg2 = ClassGroup.create!(
         name: "9 English WIB",
         class_code: "09ENG07",
-        description: "Year 9 Core English"
+        description: "Year 9 Core English",
+        user_id: u2.id
     )
 
     puts "I have finished creating #{ClassGroup.count} ClassGroups."
@@ -442,5 +444,5 @@
 
     puts "\n###### Creating Associations ##### "
 
-    u2.class_groups  << cg1 << cg2
+    # u2.class_groups  << cg1 << cg2
 

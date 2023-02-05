@@ -1,5 +1,5 @@
 class Priority < ApplicationRecord
 
-    has_many :content_descriptors
+    # has_many :content_descriptors
 
 end
