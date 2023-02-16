@@ -1,11 +1,11 @@
 class LearningArea < ApplicationRecord
 
-    # has_many :subjects
-    # has_many :tasks
+    has_many :subjects
+    has_many :tasks
     has_many :class_groups
     has_many :users, through: :class_groups
-    # has_many :modes
-    # has_many :years
+    has_many :modes
+    has_many :years
 
 
 

@@ -1,7 +1,7 @@
 class AchievementStandard < ApplicationRecord
 
-    # belongs_to :years
-    # belongs_to :learning_areas, through: :years
-    # has_many :modes
+    belongs_to :year
+    belongs_to :learning_area
+    has_many :modes
 
 end

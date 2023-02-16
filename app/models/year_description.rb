@@ -1,5 +1,5 @@
 class YearDescription < ApplicationRecord
 
-    has_many :years
+    belongs_to :year
 
 end

@@ -2,7 +2,7 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
 
-## Start Seeds ##
+puts "### Starting Seeds ###"
 
 ##! User Seeds ##
 
@@ -243,7 +243,9 @@
         
         Literary texts that support and extend students in Years 7 and 8 as independent readers are drawn from a range of realistic, fantasy, speculative fiction and historical genres and involve some challenging and unpredictable plot sequences and a range of non-stereotypical characters. These texts explore themes of interpersonal relationships and ethical dilemmas within real-world and fictional settings and represent a variety of perspectives. Informative texts present technical and content information from various sources about specialised topics. Text structures are more complex including chapters, headings and subheadings, tables of contents, indexes and glossaries. Language features include successive complex sentences with embedded clauses, unfamiliar technical vocabulary, figurative and rhetorical language, and information supported by various types of graphics.
         
-        Students create a range of imaginative, informative and persuasive types of texts, for example narratives, procedures, performances, reports and discussions, and are beginning to create literary analyses and transformations of texts."
+        Students create a range of imaginative, informative and persuasive types of texts, for example narratives, procedures, performances, reports and discussions, and are beginning to create literary analyses and transformations of texts.", 
+        year_id: y7.id
+
     )
 
     puts "I have created #{YearDescription.count} Year  Descriptions.\n"
@@ -413,7 +415,9 @@
         Students understand how to use a variety of language features to create different levels of meaning. They understand how interpretations can vary by comparing their responses to texts to the responses of others. In creating texts, students demonstrate how manipulating language features and images can create innovative texts.
         
         Students create texts that respond to issues, interpreting and integrating ideas from other texts. They make presentations and contribute actively to class and group discussions, comparing and evaluating responses to ideas and issues. They edit for effect, selecting vocabulary and grammar that contribute to the precision and persuasiveness of texts and using accurate spelling and punctuation.
-        "
+        ",
+        year_id: y9.id,
+        learning_area_id: l_a1.id
     )
     puts "I have finished creating #{AchievementStandard.count} ClassGroups."
     puts "The ClassGroups I have created are #{AchievementStandard.pluck(:description).join(", ")}.\n"
@@ -427,13 +431,15 @@
 
     m1 = Mode.create!(
         name: "Reading and Viewing",
-        notes: "Receptive Mode"
+        notes: "Receptive Mode",
+        learning_area_id: l_a1.id
     
     )
     
     m2 = Mode.create!(
         name: "Writing and Creating",
-        notes: "Productive Mode"
+        notes: "Productive Mode",
+        learning_area_id: l_a1.id
     
     )
 
@@ -442,9 +448,35 @@
 
 
 
-##! Creating Associations
+##! Student Seeds
+    puts "\n\n####Creating Student Seeds"
 
-    puts "\n###### Creating Associations ##### "
+    Student.destroy_all
 
-    # u2.class_groups  << cg1 << cg2
+
+    stud1 = Student.create!(
+        first_name: "Sally",
+        last_name: "Smith",
+        dob: "1999-06-06",
+        student_id: 00001,
+        year_id: y7.id
+
+
+    )
+
+    stud1 = Student.create!(
+        first_name: "Jake",
+        last_name: "Jefferies",
+        dob: "2010-06-06",
+        student_id: 00002,
+        year_id: y9.id
+
+
+    )
+
+
+    puts "I have finished creating #{Student.count} Students."
+    puts "The Students I have created are #{Student.pluck(:first_name).join(", ")}.\n"
+
+puts "\n\n\n\n#### Seeds Copmpleted ####"
 
