@@ -12,7 +12,7 @@ puts "### Starting Seeds ###"
     u1 = User.create!(
         name: "admin",
         email: "admin@ctool.com",
-        password_digest: "chicken",
+        password: "chicken",
         admin: true
 
     )
@@ -20,7 +20,7 @@ puts "### Starting Seeds ###"
     u2 = User.create!(
         name: "teacher1",
         email: "teach@education.com",
-        password_digest: "chicken",
+        password: "chicken",
         admin: false
     )
 
