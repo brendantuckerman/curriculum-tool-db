@@ -478,5 +478,5 @@ puts "### Starting Seeds ###"
     puts "I have finished creating #{Student.count} Students."
     puts "The Students I have created are #{Student.pluck(:first_name).join(", ")}.\n"
 
-puts "\n\n\n\n#### Seeds Copmpleted ####"
+puts "\n\n\n\n#### Seeds Completed ####"
 

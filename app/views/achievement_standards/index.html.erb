@@ -1,0 +1,11 @@
+<h2>All Achievement Standards:</h2>
+
+<ul>
+    
+    <% @achievement_standards.each do |standard |  %>
+        <li><%= link_to standard.description, achievement_standard_path(standard.id) %> ( <%= standard.year.label + ", " + standard.learning_area.name %> )</li>
+    
+    
+    <% end  %>
+
+</ul>
