@@ -1,11 +1,32 @@
 <h2>All Achievement Standards:</h2>
 
-<ul>
-    
-    <% @achievement_standards.each do |standard |  %>
-        <li><%= link_to standard.description, achievement_standard_path(standard.id) %> ( <%= standard.year.label + ", " + standard.learning_area.name %> )</li>
-    
+ <table>
+  <tr>
+    <th>Standard</th>
+    <th>Year Level</th>
+    <th>Subject</th>
+    <th>Edit / Delete</th>
+  </tr>
+
+  <% @achievement_standards.each do |standard |  %>
+        <tr>
+            <td> <%= link_to standard.description, achievement_standard_path(standard.id) %> 
+            </td> 
+            <td> <%= standard.year.label %>
+            </td>
+            <td>
+             <%= standard.learning_area.name %>
+            </td>
+            <td> 
+                <ul>
+                    <li>Edit</li>
+                    <li>Delete</li>
+                </ul>
+            </td>
+        </tr>
+        
     
     <% end  %>
+</table> 
 
-</ul>
+<p><%= link_to "Create New Achievement Standard",new_achievement_standard_path %> </p>
