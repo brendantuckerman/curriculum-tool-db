@@ -21,5 +21,8 @@ Rails.application.routes.draw do
   #Create all other routes  
   resources :users, :achievement_standards, :capabilities, :class_groups, :content_descriptors, :learning_areas, :modes, :priorities, :strands, :students, :subjects, :substrands, :subthreads, :tasks, :year_descriptions, :years
 
+ 
+ 
+
 
 end

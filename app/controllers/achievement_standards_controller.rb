@@ -46,7 +46,7 @@ class AchievementStandardsController < PagesController
     private
 
     def achievement_standard_params
-        params.require(:description, :year_id, :learning_area_id).permit(:knowledge, :skills, :understand)
+        params.require(:achievement_standard).permit(:description, :year_id, :learning_area_id, :knowledge, :skills, :understanding)
     end #end achievement_standard_params
 
     

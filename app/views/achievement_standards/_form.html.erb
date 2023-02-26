@@ -1,38 +1,42 @@
-<% if @achievement_standard.errors.any? %>
-        <strong>Please corrrect the following:</strong>
-        <ul>
-            <% @achievement_standards.errors.full_messages.each do |e| %>
-                <li><%= e %></li>
 
-            <% end %>
-        </ul>
+<div>
+    <% if @achievement_standard.errors.any? %>
+            <strong>Please corrrect the following:</strong>
+            <ul>
+                <% @achievement_standard.errors.full_messages.each do |e| %>
+                    <li><%= e %></li>
 
-<% end  %>
+                <% end %>
+            </ul>
+
+    <% end  %>
 
 
 
-<%= form_with model: @achievement_standards, local: true do |f| %>
+    <%= form_with model: @achievement_standard,  local: true do |f| %>
 
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
 
-    <%= f.label :knowledge %>
-    <%= f.text_field :knowledge %>
+        <%= f.label :knowledge %>
+        <%= f.text_field :knowledge %>
 
-    <%= f.label :skills %>
-    <%= f.text_field :skills %>
+        <%= f.label :skills %>
+        <%= f.text_field :skills %>
 
-    <%= f.label :understanding %>
-    <%= f.text_field :understanding %>
+        <%= f.label :understanding %>
+        <%= f.text_field :understanding %>
 
-    <%= f.label "Year Level" %>
-    <%= f.select :year_id, Year.all.collect { |y| [ y.label, y.id ] }, include_blank: true %>
+        <%= f.label :year_id, "Year Level" %>
+        <%= f.select :year_id, Year.all.collect { |y| [ y.label, y.id ] }, include_blank: true %>
 
-    <%= f.label "Learning Area" %>
-    <%= f.select :ylearning_area_id, LearningArea.all.collect { |l| [ l.name, l.id ] }, include_blank: true %>
+        <%= f.label :learning_area_id, "Learning Area" %>
+        <%= f.select :learning_area_id, LearningArea.all.collect { |l| [ l.name, l.id ] }, include_blank: true %>
 
-    <%= f.submit %>
+        <%= f.submit class:"button" %>
 
-<% end  %>
+    <% end  %>
+
+</div>
 
       <%# t.integer "learning_area_id" %>
