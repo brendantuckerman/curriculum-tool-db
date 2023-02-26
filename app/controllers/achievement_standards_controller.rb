@@ -1,5 +1,7 @@
 class AchievementStandardsController < PagesController
 
+    before_action :authorize
+
     #Create
     def new
         @achievement_standard = AchievementStandard.new

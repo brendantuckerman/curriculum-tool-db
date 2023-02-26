@@ -1,0 +1,38 @@
+<% if @achievement_standard.errors.any? %>
+        <strong>Please corrrect the following:</strong>
+        <ul>
+            <% @achievement_standards.errors.full_messages.each do |e| %>
+                <li><%= e %></li>
+
+            <% end %>
+        </ul>
+
+<% end  %>
+
+
+
+<%= form_with model: @achievement_standards, local: true do |f| %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :knowledge %>
+    <%= f.text_field :knowledge %>
+
+    <%= f.label :skills %>
+    <%= f.text_field :skills %>
+
+    <%= f.label :understanding %>
+    <%= f.text_field :understanding %>
+
+    <%= f.label "Year Level" %>
+    <%= f.select :year_id, Year.all.collect { |y| [ y.label, y.id ] }, include_blank: true %>
+
+    <%= f.label "Learning Area" %>
+    <%= f.select :ylearning_area_id, LearningArea.all.collect { |l| [ l.name, l.id ] }, include_blank: true %>
+
+    <%= f.submit %>
+
+<% end  %>
+
+      <%# t.integer "learning_area_id" %>
