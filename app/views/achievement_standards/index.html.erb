@@ -19,6 +19,7 @@
             </td>
             <td> 
                 <ul>
+                     <li><%= link_to "Edit", edit_achievement_standard_path(standard.id) %></li>
                     <%# TODO: Edit button %>
                     <li><%= button_to "Delete", achievement_standard_path(standard.id), method: 'delete' %></li>
                     

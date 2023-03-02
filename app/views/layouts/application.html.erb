@@ -11,6 +11,19 @@
   </head>
 
   <body>
+    <header>
+      <h1>Australian Curriculum Tool DB</h1>
+       
+       <% if current_user.present?  %>
+       Welcome, <%= @current_user.name %> | <%= link_to 'Logout', login_path, method: 'delete' %>
+       |
+       <%= link_to 'Home', root_path %>  
+
+       
+      <% else %>
+      <%= link_to 'Login', login_path %>
+      <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>

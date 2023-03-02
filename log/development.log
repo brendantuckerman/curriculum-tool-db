@@ -32101,3 +32101,599 @@ Processing by AchievementStandardsController#index as TURBO_STREAM
 Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 5165)
 
 
+Started GET "/" for 127.0.0.1 at 2023-02-27 17:23:22 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 28679)
+Completed 200 OK in 95ms (Views: 47.7ms | ActiveRecord: 10.6ms | Allocations: 54503)
+
+
+Started GET "/achievement_standards/" for 127.0.0.1 at 2023-02-27 17:23:27 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (1.5ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (55.6ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (1.0ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 187.6ms | Allocations: 55475)
+  Rendered layout layouts/application.html.erb (Duration: 193.0ms | Allocations: 57646)
+Completed 200 OK in 207ms (Views: 119.4ms | ActiveRecord: 75.7ms | Allocations: 63271)
+
+
+Started POST "/achievement_standards/24/edit" for 127.0.0.1 at 2023-02-27 17:23:30 +1100
+  
+ActionController::RoutingError (No route matches [POST] "/achievement_standards/24/edit"):
+  
+Started GET "/achievement_standards/" for 127.0.0.1 at 2023-02-27 17:23:30 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.3ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.3ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.3ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2220)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4398)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 1.3ms | Allocations: 5305)
+
+
+Started POST "/achievement_standards/24/edit" for 127.0.0.1 at 2023-02-27 17:23:32 +1100
+  
+ActionController::RoutingError (No route matches [POST] "/achievement_standards/24/edit"):
+  
+Started GET "/achievement_standards/" for 127.0.0.1 at 2023-02-27 17:23:33 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.3ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2220)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4382)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.0ms | Allocations: 5289)
+
+
+Started GET "/routes" for 127.0.0.1 at 2023-02-27 17:23:38 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-02-27 17:23:54 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.3ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.1ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2458)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4858)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.8ms | Allocations: 6363)
+
+
+Started GET "/achievement_standards/24/edit" for 127.0.0.1 at 2023-02-27 17:23:56 +1100
+Processing by AchievementStandardsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards" WHERE "achievement_standards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/achievement_standards_controller.rb:27:in `edit'
+Completed 406 Not Acceptable in 3ms (ActiveRecord: 0.5ms | Allocations: 2136)
+
+
+  
+ActionController::MissingExactTemplate (AchievementStandardsController#edit is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.1) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (7.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (7.0.4.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:107:in `run_callbacks'
+actionpack (7.0.4.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/achievement_standards/24/edit" for 127.0.0.1 at 2023-02-27 17:40:43 +1100
+Processing by AchievementStandardsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards" WHERE "achievement_standards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/achievement_standards_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/edit.html.erb within layouts/application
+  Rendered achievement_standards/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2509)
+Completed 200 OK in 15ms (Views: 4.6ms | ActiveRecord: 3.6ms | Allocations: 7441)
+
+
+Started GET "/achievement_standards/24/edit" for 127.0.0.1 at 2023-03-02 17:07:20 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AchievementStandardsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mAchievementStandard Load (0.6ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards" WHERE "achievement_standards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/achievement_standards_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/edit.html.erb within layouts/application
+  Rendered achievement_standards/edit.html.erb within layouts/application (Duration: 0.7ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 28511)
+Completed 200 OK in 88ms (Views: 42.0ms | ActiveRecord: 12.0ms | Allocations: 75448)
+
+
+Started GET "/achievement_standards/" for 127.0.0.1 at 2023-03-02 17:07:24 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.8ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (1.0ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.9ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 75.8ms | Allocations: 39423)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 41594)
+Completed 200 OK in 84ms (Views: 69.5ms | ActiveRecord: 11.9ms | Allocations: 42559)
+
+
+Started GET "/achievement_standards/24/edit" for 127.0.0.1 at 2023-03-02 17:10:41 +1100
+Processing by AchievementStandardsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards" WHERE "achievement_standards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/achievement_standards_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/edit.html.erb within layouts/application
+  [1m[36mYear Load (0.3ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  ↳ app/views/achievement_standards/_form.html.erb:31:in `collect'
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  ↳ app/views/achievement_standards/_form.html.erb:34:in `collect'
+  Rendered achievement_standards/_form.html.erb (Duration: 20.0ms | Allocations: 10947)
+  Rendered achievement_standards/edit.html.erb within layouts/application (Duration: 20.6ms | Allocations: 11197)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 13590)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 1.0ms | Allocations: 15555)
+
+
+Started GET "/achievement_standards/24/edit" for 127.0.0.1 at 2023-03-02 17:12:22 +1100
+Processing by AchievementStandardsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards" WHERE "achievement_standards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/achievement_standards_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/edit.html.erb within layouts/application
+  Rendered achievement_standards/edit.html.erb within layouts/application (Duration: 11.7ms | Allocations: 4299)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4368)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms | Allocations: 6311)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2> Edit Achievment Standard:</h2>
+<%# You can also add the details of the thing you are editing. Not doing here because AS are so long %>
+
+<%= render partial: "form" %>
+
+<%= link_to "Back to Achivement Standards" achievement_standards_path  %>
+):
+1:    <h2> Edit Achievment Standard:</h2>
+2:    <%# You can also add the details of the thing you are editing. Not doing here because AS are so long %>
+3:    
+4:    <%= render partial: "form" %>
+5:    
+6:    <%= link_to "Back to Achivement Standards" achievement_standards_path  %>
+  
+app/views/achievement_standards/edit.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/achievement_standards/edit.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/achievement_standards/edit.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/achievement_standards/edit.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/achievement_standards/edit.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/achievement_standards/edit.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/achievement_standards/24/edit" for 127.0.0.1 at 2023-03-02 17:12:46 +1100
+Processing by AchievementStandardsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards" WHERE "achievement_standards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/achievement_standards_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/edit.html.erb within layouts/application
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  ↳ app/views/achievement_standards/_form.html.erb:31:in `collect'
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  ↳ app/views/achievement_standards/_form.html.erb:34:in `collect'
+  Rendered achievement_standards/_form.html.erb (Duration: 4.8ms | Allocations: 4284)
+  Rendered achievement_standards/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4580)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 6993)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.8ms | Allocations: 8953)
+
+
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-03-02 17:12:48 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2470)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4640)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.8ms | Allocations: 5584)
+
+
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-03-02 17:13:53 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.4ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.4ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.3ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2458)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4865)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 1.3ms | Allocations: 6362)
+
+
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-03-02 17:14:33 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.1ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2458)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3635)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 5112)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>CurriculumToolDb</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Australian Curriculum Tool DB</h1>
+       <% if current_user.present?  %>
+       Welcome, <%= @current_user.name %>
+    <%= yield %>
+  </body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>CurriculumToolDb</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+10:        <%= javascript_importmap_tags %>
+11:      </head>
+12:    
+13:      <body>
+14:        <header>
+15:          <h1>Australian Curriculum Tool DB</h1>
+16:           <% if current_user.present?  %>
+17:           Welcome, <%= @current_user.name %>
+18:        <%= yield %>
+19:      </body>
+20:    </html>
+  
+app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting `end'
+app/views/layouts/application.html.erb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-03-02 17:16:12 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.4ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.4ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.3ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 2459)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 5057)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 1.4ms | Allocations: 6557)
+
+
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-03-02 17:23:03 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.8ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.3ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.2ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2485)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 5119)
+Completed 200 OK in 31ms (Views: 16.8ms | ActiveRecord: 5.0ms | Allocations: 9594)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-02 17:23:04 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2401)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 3706)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-02 17:23:13 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2256)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 3120)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-02 17:23:33 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 134)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2775)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 4229)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-02 17:24:01 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1416)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4047)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 5489)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2023-03-02 17:24:09 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2338)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 3204)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2023-03-02 17:24:10 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 94)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2333)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 3211)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2023-03-02 17:24:25 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2830)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 4284)
+
+
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-03-02 17:24:27 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.4ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.4ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2457)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 4706)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 1.2ms | Allocations: 6013)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-02 17:24:29 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2300)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 3166)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-02 17:24:56 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2830)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 4282)
+
+
+Started GET "/achievement_standards" for 127.0.0.1 at 2023-03-02 17:25:05 +1100
+Processing by AchievementStandardsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/index.html.erb within layouts/application
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards"[0m
+  ↳ app/views/achievement_standards/index.html.erb:11
+  [1m[36mYear Load (0.1ms)[0m  [1m[34mSELECT "years".* FROM "years" WHERE "years"."id" = $1 LIMIT $2[0m  [["id", 1248], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:15
+  [1m[36mLearningArea Load (0.1ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas" WHERE "learning_areas"."id" = $1 LIMIT $2[0m  [["id", 663], ["LIMIT", 1]]
+  ↳ app/views/achievement_standards/index.html.erb:18
+  Rendered achievement_standards/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2457)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4706)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 6019)
+
+
+Started GET "/achievement_standards/24/edit" for 127.0.0.1 at 2023-03-02 17:25:21 +1100
+Processing by AchievementStandardsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mAchievementStandard Load (0.2ms)[0m  [1m[34mSELECT "achievement_standards".* FROM "achievement_standards" WHERE "achievement_standards"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/achievement_standards_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering achievement_standards/edit.html.erb within layouts/application
+  [1m[36mYear Load (0.2ms)[0m  [1m[34mSELECT "years".* FROM "years"[0m
+  ↳ app/views/achievement_standards/_form.html.erb:31:in `collect'
+  [1m[36mLearningArea Load (0.1ms)[0m  [1m[34mSELECT "learning_areas".* FROM "learning_areas"[0m
+  ↳ app/views/achievement_standards/_form.html.erb:34:in `collect'
+  Rendered achievement_standards/_form.html.erb (Duration: 5.0ms | Allocations: 4281)
+  Rendered achievement_standards/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4577)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 6818)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.6ms | Allocations: 8222)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-02 17:25:26 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 174], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 48)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2300)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 3158)
+
+
