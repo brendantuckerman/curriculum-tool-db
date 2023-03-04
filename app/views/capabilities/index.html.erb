@@ -1,0 +1,25 @@
+<h2>All Capabilities:</h2>
+
+<table>
+  <tr>
+    <th>Capability</th>
+    <th>Edit / Delete</th>
+  </tr>
+
+  <% @capabilities.each do |c |  %>
+        <tr>
+            <td> <%= link_to c.name, capability_path(c.id) %> 
+            </td> 
+            <td> 
+                <ul>
+                     <li><%= link_to "Edit", edit_capability_path(c.id) %></li>
+                   
+                    <li><%= button_to "Delete", capability_path(c.id), method: 'delete' %></li>
+                    
+                </ul>
+            </td>
+        </tr>
+        
+    
+    <% end  %>
+</table> 

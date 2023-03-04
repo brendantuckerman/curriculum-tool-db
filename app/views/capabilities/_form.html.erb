@@ -1,0 +1,25 @@
+
+<div>
+    <% if @capability.errors.any? %>
+            <strong>Please corrrect the following:</strong>
+            <ul>
+                <% @capability.errors.full_messages.each do |e| %>
+                    <li><%= e %></li>
+
+                <% end %>
+            </ul>
+
+    <% end  %>
+
+
+
+    <%= form_with model: @capability,  local: true do |f| %>
+
+        <%= f.label :name %>
+        <%= f.text_area :name %>
+
+        <%= f.submit class:"button" %>
+
+    <% end  %>
+
+</div>
