@@ -33929,3 +33929,1068 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 3804)
 
 
+Started GET "/" for ::1 at 2023-03-05 10:44:14 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+Redirected to http://[::1]:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:44:15 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 28752)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 31214)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:44:51 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"admin@ctoll.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@ctoll.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/login
+Completed 302 Found in 25ms (ActiveRecord: 6.6ms | Allocations: 7406)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:44:51 +1100
+Processing by SessionController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 428)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2630)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 2910)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:48:00 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2385)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2453)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3285)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Login</h1>
+    2: 
+    3: <% if @session.errors.any? %>
+    4:             <strong>Please corrrect the following:</strong>
+    5:             <ul>
+    6:                 <% @session.errors.full_messages.each do |e| %>
+  
+app/views/session/new.html.erb:3
+Started GET "/login" for ::1 at 2023-03-05 10:48:12 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1730)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1798)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2595)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Login</h1>
+    2: 
+    3: <% if @user.errors.any? %>
+    4:             <strong>Please corrrect the following:</strong>
+    5:             <ul>
+    6:                 <% @user.errors.full_messages.each do |e| %>
+  
+app/views/session/new.html.erb:3
+Started GET "/login" for ::1 at 2023-03-05 10:48:47 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 4846)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4913)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 5705)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x00000000017ae8>
+Did you mean?  for
+               fork):
+    1: <h1>Login</h1>
+    2: 
+    3: <% if form.errors.any? %>
+    4:             <strong>Please corrrect the following:</strong>
+    5:             <ul>
+    6:                 <% form.errors.full_messages.each do |e| %>
+  
+app/views/session/new.html.erb:3
+Started GET "/login" for ::1 at 2023-03-05 10:49:03 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 652)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 13733)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 14553)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:50:21 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1139)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1207)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2000)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Login</h1>
+
+<% if flash[:error]  %>
+
+    <br>
+    <strong>
+        <%= flash[:error] %>
+    </strong>
+    <br>
+    <br>
+
+
+<%= form_tag '/login' do %>
+
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+
+<% end %>
+):
+1:    <h1>Login</h1>
+2:    
+3:    <% if flash[:error]  %>
+4:    
+5:        <br>
+6:        <strong>
+7:            <%= flash[:error] %>
+8:        </strong>
+9:        <br>
+10:        <br>
+11:    
+12:    
+13:    <%= form_tag '/login' do %>
+14:    
+15:      Email: <%= text_field_tag :email %>
+16:      Password: <%= password_field_tag :password %>
+17:      <%= submit_tag "Submit" %>
+18:    
+19:    <% end %>
+  
+app/views/session/new.html.erb:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/session/new.html.erb:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/session/new.html.erb:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/session/new.html.erb:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/session/new.html.erb:21: syntax error, unexpected end-of-input, expecting `end'
+app/views/session/new.html.erb:21: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/login" for ::1 at 2023-03-05 10:50:30 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 749)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3369)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 4185)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:50:33 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"admin@ctoll.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@ctoll.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/login
+Completed 302 Found in 13ms (ActiveRecord: 2.4ms | Allocations: 7159)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:50:33 +1100
+Processing by SessionController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 443)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2644)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 2924)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:50:34 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 441)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2642)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2869)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:50:39 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"admin@ctoll.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@ctoll.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 796)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:50:39 +1100
+Processing by SessionController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 453)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2654)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 2886)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:50:40 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 439)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2640)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 2867)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:50:44 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"gfgdfgdf", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gfgdfgdf"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 784)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:50:44 +1100
+Processing by SessionController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 445)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2646)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2879)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:50:58 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"dfgdfdfg", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dfgdfdfg"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 780)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:50:58 +1100
+Processing by SessionController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 449)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2650)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 2882)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:53:03 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"fsfdsf", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fsfdsf"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms | Allocations: 5059)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:53:03 +1100
+Processing by SessionController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 477)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 13083)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 13665)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:53:31 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"amin@ctool.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "amin@ctool.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 789)
+
+
+Started GET "/login" for ::1 at 2023-03-05 10:53:31 +1100
+Processing by SessionController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 470)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2671)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 2903)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:54:04 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"admin@ctool.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@ctool.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 2.5ms | Allocations: 19568)
+
+
+  
+NoMethodError (undefined method `[]=' for nil:NilClass):
+  
+app/controllers/session_controller.rb:16:in `create'
+Started GET "/login" for ::1 at 2023-03-05 10:54:36 +1100
+Processing by SessionController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 450)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 13139)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 13750)
+
+
+Started POST "/login" for ::1 at 2023-03-05 10:54:47 +1100
+Processing by SessionController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"admin@ctool.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@ctool.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/
+Completed 302 Found in 262ms (ActiveRecord: 5.3ms | Allocations: 6566)
+
+
+Started GET "/" for ::1 at 2023-03-05 10:54:47 +1100
+Processing by PagesController#home as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 252)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2507)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 4348)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 10:54:55 +1100
+Processing by CapabilitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (1.1ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:9
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 3826)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 6075)
+Completed 200 OK in 29ms (Views: 16.8ms | ActiveRecord: 5.3ms | Allocations: 8738)
+
+
+Started GET "/" for ::1 at 2023-03-05 10:55:06 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2327)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.5ms | Allocations: 3166)
+
+
+Started GET "/" for ::1 at 2023-03-05 11:00:13 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 12721)
+Completed 200 OK in 23ms (Views: 10.7ms | ActiveRecord: 3.2ms | Allocations: 20030)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:00:20 +1100
+Processing by CapabilitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:9
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3534)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 5783)
+Completed 200 OK in 26ms (Views: 16.7ms | ActiveRecord: 4.0ms | Allocations: 8349)
+
+
+Started GET "/capabilities/536/edit" for ::1 at 2023-03-05 11:00:22 +1100
+Processing by CapabilitiesController#edit as HTML
+  Parameters: {"id"=>"536"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/edit.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 11.5ms | Allocations: 4312)
+  Rendered capabilities/edit.html.erb within layouts/application (Duration: 20.8ms | Allocations: 4608)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 6865)
+Completed 200 OK in 30ms (Views: 23.9ms | ActiveRecord: 0.6ms | Allocations: 8748)
+
+
+Started PATCH "/capabilities/536" for ::1 at 2023-03-05 11:00:24 +1100
+Processing by CapabilitiesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "capability"=>{"name"=>"Literacy2"}, "commit"=>"Update Capability", "id"=>"536"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:29:in `update'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms | Allocations: 4520)
+
+
+  
+NameError (undefined local variable or method `capability' for #<CapabilitiesController:0x00000000030b10>
+Did you mean?  @capability):
+  
+app/controllers/capabilities_controller.rb:30:in `update'
+Started GET "/capabilities/536/edit" for ::1 at 2023-03-05 11:00:37 +1100
+Processing by CapabilitiesController#edit as HTML
+  Parameters: {"id"=>"536"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.2ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/edit.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 1.0ms | Allocations: 685)
+  Rendered capabilities/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 768)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 13485)
+Completed 200 OK in 30ms (Views: 10.4ms | ActiveRecord: 8.8ms | Allocations: 24163)
+
+
+Started PATCH "/capabilities/536" for ::1 at 2023-03-05 11:00:40 +1100
+Processing by CapabilitiesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "capability"=>{"name"=>"Literacy2"}, "commit"=>"Update Capability", "id"=>"536"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/capabilities_controller.rb:30:in `update'
+  [1m[36mCapability Update (0.5ms)[0m  [1m[33mUPDATE "capabilities" SET "name" = $1, "updated_at" = $2 WHERE "capabilities"."id" = $3[0m  [["name", "Literacy2"], ["updated_at", "2023-03-05 00:00:40.037190"], ["id", 536]]
+  ↳ app/controllers/capabilities_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/capabilities_controller.rb:30:in `update'
+Redirected to http://[::1]:3000/capabilities/536
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms | Allocations: 3633)
+
+
+Started GET "/capabilities/536" for ::1 at 2023-03-05 11:00:40 +1100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for CapabilitiesController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/capabilities/536/edit" for ::1 at 2023-03-05 11:00:40 +1100
+Processing by CapabilitiesController#edit as HTML
+  Parameters: {"id"=>"536"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.2ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/edit.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 1.0ms | Allocations: 671)
+  Rendered capabilities/edit.html.erb within layouts/application (Duration: 1.2ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2998)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 4295)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:00:42 +1100
+Processing by CapabilitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:9
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2446)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4684)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.6ms | Allocations: 5544)
+
+
+Started GET "/capabilities/536/edit" for ::1 at 2023-03-05 11:00:59 +1100
+Processing by CapabilitiesController#edit as HTML
+  Parameters: {"id"=>"536"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.4ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/edit.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 2.7ms | Allocations: 671)
+  Rendered capabilities/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2982)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.7ms | Allocations: 4284)
+
+
+Started PATCH "/capabilities/536" for ::1 at 2023-03-05 11:01:02 +1100
+Processing by CapabilitiesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "capability"=>{"name"=>"Literacy"}, "commit"=>"Update Capability", "id"=>"536"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/capabilities_controller.rb:30:in `update'
+  [1m[36mCapability Update (0.4ms)[0m  [1m[33mUPDATE "capabilities" SET "name" = $1, "updated_at" = $2 WHERE "capabilities"."id" = $3[0m  [["name", "Literacy"], ["updated_at", "2023-03-05 00:01:02.427757"], ["id", 536]]
+  ↳ app/controllers/capabilities_controller.rb:30:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/capabilities_controller.rb:30:in `update'
+Redirected to http://[::1]:3000/capabilities/536
+Completed 302 Found in 13ms (ActiveRecord: 1.9ms | Allocations: 2937)
+
+
+Started GET "/capabilities/536" for ::1 at 2023-03-05 11:01:02 +1100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for CapabilitiesController):
+  
+actionpack (7.0.4.1) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/capabilities/536/edit" for ::1 at 2023-03-05 11:01:02 +1100
+Processing by CapabilitiesController#edit as HTML
+  Parameters: {"id"=>"536"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.1ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:24:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/edit.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 1.1ms | Allocations: 671)
+  Rendered capabilities/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2982)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 4285)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:01:10 +1100
+Processing by CapabilitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:9
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2444)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4682)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.5ms | Allocations: 5572)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:02:53 +1100
+Processing by CapabilitiesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.5ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:11
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2772)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 5402)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.8ms | Allocations: 6883)
+
+
+Started DELETE "/capabilities/536" for ::1 at 2023-03-05 11:02:57 +1100
+Processing by CapabilitiesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"536"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.2ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+  [1m[36mCapability Destroy (0.4ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 536]]
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+Redirected to http://[::1]:3000/capabilities
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms | Allocations: 2581)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:02:57 +1100
+Processing by CapabilitiesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:11
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2198)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4436)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 5353)
+
+
+Started GET "/capabilities/new" for ::1 at 2023-03-05 11:02:59 +1100
+Processing by CapabilitiesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/new.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 3.3ms | Allocations: 1907)
+  Rendered capabilities/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2154)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2221)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 3132)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: <div>
+    3:     <% if @capability.errors.any? %>
+    4:             <strong>Please corrrect the following:</strong>
+    5:             <ul>
+    6:                 <% @capability.errors.full_messages.each do |e| %>
+  
+app/views/capabilities/_form.html.erb:3
+app/views/capabilities/new.html.erb:4
+Started GET "/capabilities/new" for ::1 at 2023-03-05 11:03:35 +1100
+Processing by CapabilitiesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/new.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 1.2ms | Allocations: 1496)
+  Rendered capabilities/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1553)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1620)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 8.0ms | Allocations: 11366)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: <div>
+    3:     <% if @capability.errors.any? %>
+    4:             <strong>Please corrrect the following:</strong>
+    5:             <ul>
+    6:                 <% @capability.errors.full_messages.each do |e| %>
+  
+app/views/capabilities/_form.html.erb:3
+app/views/capabilities/new.html.erb:4
+Started GET "/capabilities/536/edit" for ::1 at 2023-03-05 11:03:41 +1100
+Processing by CapabilitiesController#edit as HTML
+  Parameters: {"id"=>"536"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.2ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 536], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:24:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.5ms | Allocations: 1933)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Capability with 'id'=536):
+  
+app/controllers/capabilities_controller.rb:24:in `edit'
+Started GET "/capabilities/" for ::1 at 2023-03-05 11:03:58 +1100
+Processing by CapabilitiesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:11
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2219)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 14944)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.5ms | Allocations: 15817)
+
+
+Started GET "/capabilities/new" for ::1 at 2023-03-05 11:04:00 +1100
+Processing by CapabilitiesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/new.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 2.9ms | Allocations: 1568)
+  Rendered capabilities/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1625)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1692)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2528)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: <div>
+    3:     <% if @capability.errors.any? %>
+    4:             <strong>Please corrrect the following:</strong>
+    5:             <ul>
+    6:                 <% @capability.errors.full_messages.each do |e| %>
+  
+app/views/capabilities/_form.html.erb:3
+app/views/capabilities/new.html.erb:4
+Started GET "/capabilities/new" for ::1 at 2023-03-05 11:04:45 +1100
+Processing by CapabilitiesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/new.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 1.1ms | Allocations: 648)
+  Rendered capabilities/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 703)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 13432)
+Completed 200 OK in 32ms (Views: 13.2ms | ActiveRecord: 8.5ms | Allocations: 23189)
+
+
+Started POST "/capabilities" for ::1 at 2023-03-05 11:04:50 +1100
+Processing by CapabilitiesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "capability"=>{"name"=>"Literacy"}, "commit"=>"Create Capability"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/capabilities_controller.rb:11:in `create'
+  [1m[36mCapability Create (1.6ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literacy"], ["created_at", "2023-03-05 00:04:50.832910"], ["updated_at", "2023-03-05 00:04:50.832910"]]
+  ↳ app/controllers/capabilities_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/capabilities_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/capabilities
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms | Allocations: 2617)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:04:50 +1100
+Processing by CapabilitiesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.2ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:11
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2484)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4722)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 5616)
+
+
+Started DELETE "/capabilities/543" for ::1 at 2023-03-05 11:12:27 +1100
+Processing by CapabilitiesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"543"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mCapability Load (0.4ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities" WHERE "capabilities"."id" = $1 LIMIT $2[0m  [["id", 543], ["LIMIT", 1]]
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+  [1m[36mCapability Destroy (0.4ms)[0m  [1m[31mDELETE FROM "capabilities" WHERE "capabilities"."id" = $1[0m  [["id", 543]]
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/capabilities_controller.rb:39:in `destroy'
+Redirected to http://[::1]:3000/capabilities
+Completed 302 Found in 28ms (ActiveRecord: 10.1ms | Allocations: 6061)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:12:27 +1100
+Processing by CapabilitiesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:11
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2195)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 4433)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 5296)
+
+
+Started GET "/capabilities/new" for ::1 at 2023-03-05 11:12:28 +1100
+Processing by CapabilitiesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/new.html.erb within layouts/application
+  Rendered capabilities/_form.html.erb (Duration: 2.0ms | Allocations: 613)
+  Rendered capabilities/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 668)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2906)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 3764)
+
+
+Started POST "/capabilities" for ::1 at 2023-03-05 11:12:32 +1100
+Processing by CapabilitiesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "capability"=>{"name"=>"Literacy"}, "commit"=>"Create Capability"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/capabilities_controller.rb:11:in `create'
+  [1m[36mCapability Create (0.5ms)[0m  [1m[32mINSERT INTO "capabilities" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Literacy"], ["created_at", "2023-03-05 00:12:32.561049"], ["updated_at", "2023-03-05 00:12:32.561049"]]
+  ↳ app/controllers/capabilities_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/capabilities_controller.rb:11:in `create'
+Redirected to http://[::1]:3000/capabilities
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms | Allocations: 2497)
+
+
+Started GET "/capabilities" for ::1 at 2023-03-05 11:12:32 +1100
+Processing by CapabilitiesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering capabilities/index.html.erb within layouts/application
+  [1m[36mCapability Load (0.3ms)[0m  [1m[34mSELECT "capabilities".* FROM "capabilities"[0m
+  ↳ app/views/capabilities/index.html.erb:11
+  Rendered capabilities/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2470)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 4708)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 5591)
+
+
+Started GET "/" for ::1 at 2023-03-05 11:12:38 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 249)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2501)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.4ms | Allocations: 3773)
+
+
+Started GET "/" for ::1 at 2023-03-05 11:16:01 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 12786)
+Completed 200 OK in 29ms (Views: 16.6ms | ActiveRecord: 4.0ms | Allocations: 20186)
+
+
+Started GET "/" for ::1 at 2023-03-05 11:18:20 +1100
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 300)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2934)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 4357)
+
+
+Started GET "/class_groups" for ::1 at 2023-03-05 11:18:23 +1100
+  
+SyntaxError (/home/newtrick/projects/curriculum-tool/curriculum-tool-db/app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting ')'
+...ass_group).permit(:class_code :name :description :user_id :l...
+...                              ^
+/home/newtrick/projects/curriculum-tool/curriculum-tool-db/app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting `end'
+...class_code :name :description :user_id :learning_area_id)
+...                              ^
+/home/newtrick/projects/curriculum-tool/curriculum-tool-db/app/controllers/class_groups_controller.rb:49: syntax error, unexpected ')', expecting `end'
+...ion :user_id :learning_area_id)
+...                              ^
+):
+  
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting ')'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting `end'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ')', expecting `end'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting ')'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting `end'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ')', expecting `end'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting ')'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ':', expecting `end'
+app/controllers/class_groups_controller.rb:49: syntax error, unexpected ')', expecting `end'
+Started GET "/class_groups" for ::1 at 2023-03-05 11:18:56 +1100
+  
+Zeitwerk::NameError (expected file /home/newtrick/projects/curriculum-tool/curriculum-tool-db/app/controllers/class_groups_controller.rb to define constant ClassGroupsController, but didn't):
+  
+zeitwerk (2.6.6) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.1) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.1) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.1) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.1) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.1) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.1) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.1) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.1) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/class_groups" for ::1 at 2023-03-05 11:19:10 +1100
+  
+ActionController::RoutingError (uninitialized constant ClassGroupsController
+Did you mean?  ClassGroupController):
+  
+Started GET "/class_groups" for ::1 at 2023-03-05 11:19:36 +1100
+Processing by ClassGroupsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering class_groups/index.html.erb within layouts/application
+  Rendered class_groups/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 12842)
+Completed 200 OK in 26ms (Views: 9.8ms | ActiveRecord: 4.9ms | Allocations: 24533)
+
+
+Started GET "/class_groups" for ::1 at 2023-03-05 11:32:16 +1100
+Processing by ClassGroupsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 176], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering class_groups/index.html.erb within layouts/application
+  [1m[36mClassGroup Load (0.7ms)[0m  [1m[34mSELECT "class_groups".* FROM "class_groups"[0m
+  ↳ app/views/class_groups/index.html.erb:23
+  Rendered class_groups/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 18167)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 18234)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 13.6ms | Allocations: 22657)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 177:Integer):
+    24:         <tr>
+    25:             <td> <%= link_to group.class_code, class_group_path(group.id) %> 
+    26:             </td> 
+    27:             <td> <%= group.user_id.name %>
+    28:             </td>
+    29:             <td>
+    30:              <%= group.name %>
+  
+app/views/class_groups/index.html.erb:27
+app/views/class_groups/index.html.erb:23

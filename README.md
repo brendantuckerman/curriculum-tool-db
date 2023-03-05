@@ -1,11 +1,16 @@
-# README
+### Welcome to the Curriculum Tool DB ###
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-----
 
-Things you may want to cover:
+This DB maps the [Australian National Curriculum ](https://australiancurriculum.edu.au/).
 
-* Ruby version
+**Author**: Brendan Tuckerman
+
+* Github Repo: [https://github.com/MrMaverick79/curriculum-tool-db]
+
+* Ruby version 2.7.6p216
+
+* Rails version 7.0.4.1
 
 * System dependencies
 
@@ -22,3 +27,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+-----
+
+## TODO: ##
+
+* 'Are you sure' pop up for deletion
+* CRUD routes for remaining
+* 'I've forgotten my password'
+* Class groups needs a view to see details, including students
+
+
+
+
+

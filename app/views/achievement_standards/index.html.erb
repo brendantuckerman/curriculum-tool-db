@@ -1,5 +1,3 @@
-
-
 <p><%= link_to "Create New Achievement Standard",new_achievement_standard_path %> </p>
 
 <h2>All Achievement Standards:</h2>
@@ -24,7 +22,7 @@
             <td> 
                 <ul>
                      <li><%= link_to "Edit", edit_achievement_standard_path(standard.id) %></li>
-                    <%# TODO: Edit button %>
+                   
                     <li><%= button_to "Delete", achievement_standard_path(standard.id), method: 'delete' %></li>
                     
                 </ul>

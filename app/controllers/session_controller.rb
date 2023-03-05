@@ -17,6 +17,9 @@ class SessionController < ApplicationController
       redirect_to root_path
     else
       #If the user cannot be authenticated, redirect to the login_path
+      flash[:error] = "Invaild email address or password"
+
+
       redirect_to login_path
     end
    

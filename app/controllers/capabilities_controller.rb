@@ -3,7 +3,7 @@ class CapabilitiesController < PagesController
     before_action :authorize
 
     def new
-        @capabilitiy = Capability.new
+        @capability = Capability.new
     end
 
     def create
@@ -26,10 +26,20 @@ class CapabilitiesController < PagesController
     end
 
     def update
-    
+        @capability =  Capability.find params[:id]
+        @capability.update capability_params
+
+        redirect_to capability_path(capability.id)
+
+
     end
 
     def destroy
+
+        Capability.destroy params[:id]
+
+        redirect_to capabilities_path
+
 
     end
 
