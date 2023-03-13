@@ -1,0 +1,65 @@
+<p><%= link_to "Create New Content Descriptor", new_content_descriptor_path %> </p>
+
+<h2>All Content Descriptors:</h2>
+
+ <table>
+  <tr>
+    <th>Code</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Elaborations</th>
+    <th>Learning Area</th>
+    <th>Year Level(s)</th>
+    <th>Subject</th>
+    <th>Knowledge</th>
+    <th>Understanding</th>
+    <th>Skills</th>
+    <th>Notes</th>
+    <th>Edit / Delete</th>
+  </tr>
+  
+
+
+  <% @content_descriptors.each do |cd |  %>
+        <tr>
+            <td> 
+               <%= link_to cd.code, new_content_descriptor_path(cd.id) %>
+                
+            </td> 
+            <td>
+                <%= cd.title  %> 
+            </td>
+            <td> 
+                <%= cd.description %>
+            </td>
+            <td>
+                <%= cd.years.title %>
+            </td>
+            <td>
+                <%= cd.elaborations %>
+            </td>
+            <td>
+                <%= cd.elaborations %>
+            </td>
+            <td>
+                <%= cd.elaborations %>
+            </td>
+            <td>
+                <%= cd.elaborations %>
+            </td>
+            <td>
+                <%= cd.elaborations %>
+            </td>
+            <td> 
+                <ul>
+                     <li><%= link_to "Edit", edit_content_descriptor_path(cd.id) %></li>
+                   
+                    <li><%= button_to "Delete", content_descriptor_path(cd.id), method: 'delete', form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }} %></li>
+                    
+                </ul>
+            </td>
+        </tr>
+        
+    
+    <% end  %>
+</table> 

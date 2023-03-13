@@ -1,17 +1,9 @@
-p><%= link_to "Create Class Group",new_class_group_path %> </p>
+<p><%= link_to "Create Class Group",new_class_group_path %> </p>
 
 <h2>All Classes:</h2>
 
  <table>
   <tr>
-   t.text "class_code"
-    t.string "name"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "learning_area_id"
-
     <th>Class Code</th>
     <th>User</th>
     <th>Label</th>
@@ -24,13 +16,13 @@ p><%= link_to "Create Class Group",new_class_group_path %> </p>
         <tr>
             <td> <%= link_to group.class_code, class_group_path(group.id) %> 
             </td> 
-            <td> <%= group.user_id.name %>
+            <td> <%= group.user.name %>
             </td>
             <td>
              <%= group.name %>
             </td>
             <td>
-             <%= group.learning_area_id.name %>
+             <%= group.learning_area.name %>
             </td>
             <td>
              TODO: Link Subject
@@ -42,7 +34,7 @@ p><%= link_to "Create Class Group",new_class_group_path %> </p>
                 <ul>
                      <li><%= link_to "Edit", edit_class_group_path(group.id) %></li>
                    
-                    <li><%= button_to "Delete", class_group_path(group.id), method: 'delete' %></li>
+                    <li><%= button_to "Delete", class_group_path(group.id), method: 'delete', , form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }}  %></li>
                     
                 </ul>
             </td>

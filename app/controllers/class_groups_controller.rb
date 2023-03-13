@@ -19,6 +19,12 @@ class ClassGroupsController < PagesController
 
     end
 
+    def show
+        
+        @class_group = ClassGroup.find params[:id]
+
+    end
+
     def edit
 
         @class_group = ClassGroup.find params[:id]

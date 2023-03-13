@@ -5,7 +5,7 @@ class ContentDescriptor < ApplicationRecord
     has_many :strands
     has_many :substrands, through: :strands
     has_many :subthreads, through: :substrands
-    has_many :years
-    has_many :learning_areas
+    belongs_to :year
+    belongs_to :learning_area
 
 end

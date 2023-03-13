@@ -23,7 +23,7 @@
                 <ul>
                      <li><%= link_to "Edit", edit_achievement_standard_path(standard.id) %></li>
                    
-                    <li><%= button_to "Delete", achievement_standard_path(standard.id), method: 'delete' %></li>
+                    <li><%= button_to "Delete", achievement_standard_path(standard.id), method: 'delete', form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }} %></li>
                     
                 </ul>
             </td>

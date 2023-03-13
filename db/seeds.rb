@@ -363,6 +363,7 @@ puts "### Starting Seeds ###"
         description: "Understand that Standard Australian English is a living language within which the creation and loss of words and the evolution of usage is ongoing.",
         code: "ACELA1550",
         elaborations: "Identifying some of the changes in the grammar of English over time, for example from ‘thee’ and ‘thou’ to ‘you’"
+        
     )
 
     puts "I have created #{ContentDescriptor.count} Content Descriptors."
