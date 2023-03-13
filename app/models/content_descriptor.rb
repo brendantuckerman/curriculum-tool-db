@@ -7,5 +7,8 @@ class ContentDescriptor < ApplicationRecord
     has_many :subthreads, through: :substrands
     belongs_to :year
     belongs_to :learning_area
+    belongs_to :subject
+
+
 
 end

@@ -164,28 +164,45 @@ puts "### Starting Seeds ###"
     Subject.destroy_all
 
     s1 = Subject.create!(
-        name: "History"
+        name: "History",
+        learning_area_id: l_a4.id
         
     )
     s2 = Subject.create!(
-        name: "Geography"
+        name: "Geography",
+        learning_area_id: l_a4.id
         
     )
     s3 = Subject.create!(
-        name: "Economics and Business"
+        name: "Economics and Business",
+        learning_area_id: l_a4.id
         
     )
     s4 = Subject.create!(
-        name: "Civics and Citizenship"
+        name: "Civics and Citizenship",
+        learning_area_id: l_a4.id
+
         
     )
     s5 = Subject.create!(
-        name: "Design & Technologies"
+        name: "Design & Technologies",
+        learning_area_id: l_a5.id
         
     )
     s6 = Subject.create!(
-        name: "Digital Technologies"
+        name: "Digital Technologies",
+        learning_area_id: l_a4.id
         
+    )
+
+    s7 = Subject.create!(
+        name: "VCE Literature Unit 1",
+        learning_area_id: l_a1.id
+    )
+
+    s8 = Subject.create!(
+        name: "English",
+        learning_area_id: l_a1.id
     )
 
     puts "I have created #{Subject.count} Subjects."
@@ -362,7 +379,10 @@ puts "### Starting Seeds ###"
     cd1 = ContentDescriptor.create!(
         description: "Understand that Standard Australian English is a living language within which the creation and loss of words and the evolution of usage is ongoing.",
         code: "ACELA1550",
-        elaborations: "Identifying some of the changes in the grammar of English over time, for example from ‘thee’ and ‘thou’ to ‘you’"
+        elaborations: "Identifying some of the changes in the grammar of English over time, for example from ‘thee’ and ‘thou’ to ‘you’",
+        year_id: y9.id,
+        learning_area_id: l_a1.id,
+        subject_id: s8.id
         
     )
 

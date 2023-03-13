@@ -9,8 +9,8 @@
     <th>Description</th>
     <th>Elaborations</th>
     <th>Learning Area</th>
-    <th>Year Level(s)</th>
     <th>Subject</th>
+    <th>Year Level(s)</th>
     <th>Knowledge</th>
     <th>Understanding</th>
     <th>Skills</th>
@@ -32,24 +32,31 @@
             <td> 
                 <%= cd.description %>
             </td>
-            <td>
-                <%= cd.years.title %>
-            </td>
-            <td>
+            <td> 
                 <%= cd.elaborations %>
             </td>
-            <td>
-                <%= cd.elaborations %>
+            <td> 
+                <%= cd.learning_area.name %>
+            </td>
+            <td> 
+                <%= cd.subject.name %>
             </td>
             <td>
-                <%= cd.elaborations %>
+                <%= cd.year.label %>
             </td>
             <td>
-                <%= cd.elaborations %>
+                <%= cd.knowledge %>
             </td>
             <td>
-                <%= cd.elaborations %>
+                <%= cd.understanding %>
             </td>
+            <td>
+                <%= cd.skills %>
+            </td>
+            <td>
+                <%= cd.notes %>
+            </td>
+            
             <td> 
                 <ul>
                      <li><%= link_to "Edit", edit_content_descriptor_path(cd.id) %></li>
