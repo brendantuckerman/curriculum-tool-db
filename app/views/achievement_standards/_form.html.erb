@@ -16,16 +16,16 @@
     <%= form_with model: @achievement_standard,  local: true do |f| %>
 
         <%= f.label :description %>
-        <%= f.text_area :description %>
+        <%= f.text_area :description, size: "50x25" %>
 
         <%= f.label :knowledge %>
-        <%= f.text_field :knowledge %>
+        <%= f.text_area :knowledge, size: "50x25" %>
 
         <%= f.label :skills %>
-        <%= f.text_field :skills %>
+        <%= f.text_area :skills, size: "50x25" %>
 
         <%= f.label :understanding %>
-        <%= f.text_field :understanding %>
+        <%= f.text_area :understanding, size: "50x25" %>
 
         <%= f.label :year_id, "Year Level" %>
         <%= f.select :year_id, Year.all.collect { |y| [ y.label, y.id ] }, include_blank: true %>

@@ -23,7 +23,7 @@
   <% @content_descriptors.each do |cd |  %>
         <tr>
             <td> 
-               <%= link_to cd.code, new_content_descriptor_path(cd.id) %>
+               <%= link_to cd.code, "https://www.australiancurriculum.edu.au/Search?q=" + cd.code %>
                 
             </td> 
             <td>

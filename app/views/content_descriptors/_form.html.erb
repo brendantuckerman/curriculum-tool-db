@@ -1,0 +1,55 @@
+<div>
+    <% if @content_descriptor.errors.any? %>
+            <strong>Please corrrect the following:</strong>
+            <ul>
+                <% @content_descriptor.errors.full_messages.each do |e| %>
+                    <li><%= e %></li>
+
+                <% end %>
+            </ul>
+
+    <% end  %>
+
+
+
+    <%= form_with model: @content_descriptor,  local: true do |f| %>
+
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+
+        <%= f.label :description   %>
+        <%= f.text_area :description, size: "50x25" %>
+
+        <%= f.label :code %>
+        <%= f.text_field :code %>
+
+        <%= f.label :elaborations %>
+        <%= f.text_area :elaborations, size: "50x25" %>
+
+
+        <%= f.label :knowledge %>
+        <%= f.text_area :knowledge, size: "50x25" %>
+
+        <%= f.label :understanding %>
+        <%= f.text_area :understanding, size: "50x25"   %>
+
+        <%= f.label :skills %>
+        <%= f.text_area :skills, size: "50x25"  %>
+
+        <%= f.label :notes %>
+        <%= f.text_area :notes, size: "50x25"  %>
+
+        <%= f.label :year_id, "Year Level" %>
+        <%= f.select :year_id, Year.all.collect { |y| [ y.label, y.id ] }, include_blank: true %>
+
+        <%= f.label :learning_area_id, "Learning Area" %>
+        <%= f.select :learning_area_id, LearningArea.all.collect { |l| [ l.name, l.id ] }, include_blank: true %>
+        
+        <%= f.label :subject_id, "Subject" %>
+        <%= f.select :subject_id, Subject.all.collect { |s| [ s.name, s.id ] }, include_blank: true %>
+
+        <%= f.submit class:"button" %>
+
+    <% end  %>
+
+</div>

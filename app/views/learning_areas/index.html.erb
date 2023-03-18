@@ -1,0 +1,34 @@
+<p><%= link_to "Create New Achievement Standard",new_achievement_standard_path %> </p>
+
+<h2>All Achievement Standards:</h2>
+
+ <table>
+  <tr>
+    <th>Standard</th>
+    <th>Year Level</th>
+    <th>Subject</th>
+    <th>Edit / Delete</th>
+  </tr>
+
+  <% @achievement_standards.each do |standard |  %>
+        <tr>
+            <td> <%= link_to standard.description, achievement_standard_path(standard.id) %> 
+            </td> 
+            <td> <%= standard.year.label %>
+            </td>
+            <td>
+             <%= standard.learning_area.name %>
+            </td>
+            <td> 
+                <ul>
+                     <li><%= link_to "Edit", edit_achievement_standard_path(standard.id) %></li>
+                   
+                    <li><%= button_to "Delete", achievement_standard_path(standard.id), method: 'delete', form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }} %></li>
+                    
+                </ul>
+            </td>
+        </tr>
+        
+    
+    <% end  %>
+</table> 
