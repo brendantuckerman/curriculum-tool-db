@@ -1,0 +1,36 @@
+<p><%= link_to "Create Mode", new_mode_path %> </p>
+
+<h2>All Modes:</h2>
+
+ <table>
+  <tr>
+    <th>Name</th>
+    <th>Learning Area</th>
+    <th>Notes</th>
+    <th>Edit / Delete</th>
+  </tr>
+
+  <% @modes.each do | m |  %>
+        <tr>
+            <td> <%= m.name  %> 
+            </td> 
+             <td> 
+                <%= m.learning_area.name %>
+            </td>
+            <td> 
+                <%= m.notes %>
+            </td>
+
+            <td> 
+                <ul>
+                     <li><%= link_to "Edit", edit_mode_path(m.id) %></li>
+                   
+                    <li><%= button_to "Delete", mode_path(m.id), method: 'delete', form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }} %></li>
+                    
+                </ul>
+            </td>
+        </tr>
+        
+    
+    <% end  %>
+</table> 

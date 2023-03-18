@@ -1,0 +1,34 @@
+<p><%= link_to "Create Priority", new_priority_path %> </p>
+
+<h2>All Priorities:</h2>
+
+ <table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    
+    <th>Edit / Delete</th>
+  </tr>
+
+  <% @priorities.each do | d |  %>
+        <tr>
+            <td> <%= d.title  %> 
+            </td> 
+             
+            <td> 
+                <%= d.description %>
+            </td>
+
+            <td> 
+                <ul>
+                     <li><%= link_to "Edit", edit_priority_path(d.id) %></li>
+                   
+                    <li><%= button_to "Delete", priority_path(d.id), method: 'delete', form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }} %></li>
+                    
+                </ul>
+            </td>
+        </tr>
+        
+    
+    <% end  %>
+</table> 

@@ -1,0 +1,31 @@
+<div>
+    <% if @mode.errors.any? %>
+            <strong>Please corrrect the following:</strong>
+            <ul>
+                <% @mode.errors.full_messages.each do |e| %>
+                    <li><%= e %></li>
+
+                <% end %>
+            </ul>
+
+    <% end  %>
+
+
+
+    <%= form_with model: @mode,  local: true do |f| %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :learning_area_id, "Learning Area" %>
+        <%= f.select :learning_area_id, LearningArea.all.collect { |l| [ l.name, l.id ] }, include_blank: true %>
+
+
+        <%= f.label :notes %>
+        <%= f.text_area :notes %>
+
+        <%= f.submit class:"button" %>
+
+    <% end  %>
+
+</div>

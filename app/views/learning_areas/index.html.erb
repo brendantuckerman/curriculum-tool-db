@@ -1,29 +1,22 @@
-<p><%= link_to "Create New Achievement Standard",new_achievement_standard_path %> </p>
+<p><%= link_to "Create Learning Area",new_learning_area_path %>  </p>
 
-<h2>All Achievement Standards:</h2>
+<h2>All Learning Areas:</h2>
 
  <table>
   <tr>
-    <th>Standard</th>
-    <th>Year Level</th>
-    <th>Subject</th>
+    <th>Name</th>
     <th>Edit / Delete</th>
   </tr>
 
-  <% @achievement_standards.each do |standard |  %>
+  <% @learning_areas.each do |la |  %>
         <tr>
-            <td> <%= link_to standard.description, achievement_standard_path(standard.id) %> 
+            <td> <%= link_to la.name, learning_area_path(la.id) %> 
             </td> 
-            <td> <%= standard.year.label %>
-            </td>
-            <td>
-             <%= standard.learning_area.name %>
-            </td>
             <td> 
                 <ul>
-                     <li><%= link_to "Edit", edit_achievement_standard_path(standard.id) %></li>
+                     <li><%= link_to "Edit", edit_learning_area_path(la.id) %></li>
                    
-                    <li><%= button_to "Delete", achievement_standard_path(standard.id), method: 'delete', form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }} %></li>
+                    <li><%= button_to "Delete", learning_area_path(la.id), method: 'delete', form: { data: { turbo_confirm: "Are you sure? This action cannot be undone" }} %></li>
                     
                 </ul>
             </td>
